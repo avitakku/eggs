@@ -13,14 +13,30 @@
 
 ActiveRecord::Schema.define(version: 20231024225438) do
 
-  create_table "movies", force: :cascade do |t|
-    t.string   "title"
-    t.string   "rating"
-    t.text     "description"
-    t.datetime "release_date"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "director"
+    create_table "user_information", force: :cascade do |t|
+      t.string   "user_id", null: false
+      t.string   "username", null: false
+      t.string   "name", null: false
+      t.string   "contact_information", null: false
+      t.string   "address"
+      t.float    "rating"
+      t.string   "photo_url"
+      t.text     "friends", array: true, default: []
+      t.datetime "created_at"
+      t.datetime "updated_at"
+    end
+  
+    add_index "user_information", ["user_id"], unique: true
+  
+    create_table "goods_and_services", force: :cascade do |t|
+      t.string   "user_id", null: false
+      t.string   "name", null: false
+      t.integer  "type"
+      t.text     "description"
+      t.datetime "created_at"
+      t.datetime "updated_at"
+    end
+  
+    add_index "goods_and_services", ["user_id"]
+  
   end
-
-end
