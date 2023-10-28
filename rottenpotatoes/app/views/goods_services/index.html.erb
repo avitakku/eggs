@@ -27,8 +27,23 @@
     <tr>
       <th>Good/Service</th>
       <th>Name</th>
-      <th>Connection</th>
+      <th>Category</th>
     </tr>
   </thead>
-  <!-- ... -->
+  <tbody>
+    <% if @goods_services.any? %>
+    <% @goods_services.each do |goods_service| %>
+        <tr>
+            <td><%= goods_service.name %></td>
+            <td><%= goods_service.user&.name || "Unknown User" %></td>
+            <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+        </tr>
+    <% end %>
+    <% else %>
+        <tr>
+            <td colspan="3">No goods or services found.</td>
+        </tr>
+    <% end %>
+
+  </tbody>
 </table>

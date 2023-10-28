@@ -1111,3 +1111,1314 @@ Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/application.self-3a1ae05f99b4f97f4da513db02a362a8c77d0bc57eeb23e5b2d6cfa2e1bf5cc2.css?body=1" for 209.2.226.165 at 2023-10-28 20:28:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225439_create_goods_and_services.rb:8)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "type" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231024225439"]]
+  [1m[36m (66.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "goods_and_services"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231024225439"]]
+  [1m[35m (69.2ms)[0m  commit transaction
+Migrating to CreateUserInformations (20231024225438)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "user_informations"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225439_create_goods_and_services.rb:8)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231024225439"]]
+  [1m[36m (67.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "goods_and_services"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20231024225439"]]
+  [1m[35m (68.4ms)[0m  commit transaction
+Migrating to CreateUserInformations (20231024225438)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "user_informations"
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (67.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (64.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUserInformations (20231024225438)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225438_create_user_informations.rb:12)
+  [1m[35m (0.5ms)[0m  CREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231024225438"]]
+  [1m[36m (63.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225439_create_goods_and_services.rb:8)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231024225439"]]
+  [1m[35m (67.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+[0m
+  [1m[36m (68.9ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (67.9ms)[0m  [1mCREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")[0m
+  [1m[35m (69.2ms)[0m  CREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (68.1ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35m (65.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (66.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (65.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20231024225439')[0m
+  [1m[35m (66.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20231024225438')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 21:34:55 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 21:34:55 +0000
+Processing by GoodsServicesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant GoodsServicesController::GoodsService):
+  app/controllers/goods_services_controller.rb:10:in `index'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.5ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 21:35:53 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 21:35:54 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `include?' for nil:NilClass):
+    16:   <% @all_categories.each do |category| %>
+    17:     <div class="form-check form-check-inline">
+    18:       <%= label_tag "categories[#{category}]", category, class: 'form-check-label' %>
+    19:       <%= check_box_tag "categories[#{category}]", "1", @categories_to_show.include?(category), class: 'form-check-input' %>
+    20:     </div>
+    21:   <% end %>
+    22:   <%= submit_tag 'Refresh', id: 'filters_submit', class: 'btn btn-primary' %>
+  app/views/goods_services/index.html.erb:19:in `block (2 levels) in _app_views_goods_services_index_html_erb___907771730162660412_70262512737600'
+  app/views/goods_services/index.html.erb:16:in `each'
+  app/views/goods_services/index.html.erb:16:in `block in _app_views_goods_services_index_html_erb___907771730162660412_70262512737600'
+  app/views/goods_services/index.html.erb:13:in `_app_views_goods_services_index_html_erb___907771730162660412_70262512737600'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 21:38:34 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 21:38:34 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36mGoodsAndService Load (1.7ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  Rendered goods_services/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 246ms (Views: 242.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 21:38:37 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services"
+  Rendered goods_services/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 21:39:55 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 21:39:55 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36mGoodsAndService Load (0.4ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  Rendered goods_services/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 21:44:43 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 21:44:43 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  Rendered goods_services/index.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 21:47:06 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 21:47:06 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  Rendered goods_services/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "ag4049"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "jzm2103"]]
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "--- []\n"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "--- []\n"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "--- []\n"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "--- []\n"]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "--- []\n"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "--- []\n"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:13:38.560915"], ["updated_at", "2023-10-28 22:13:38.560915"]]
+  [1m[35m (69.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "67890"], ["username", "ag4049"], ["name", "Avantika Garg"], ["contact_information", "ag4049@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 2.2], ["created_at", "2023-10-28 22:13:38.633262"], ["updated_at", "2023-10-28 22:13:38.633262"]]
+  [1m[36m (67.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "15842"], ["username", "jzm2103"], ["name", "Joshua Mei"], ["contact_information", "jzm2103@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 3.2], ["created_at", "2023-10-28 22:13:38.703543"], ["updated_at", "2023-10-28 22:13:38.703543"]]
+  [1m[35m (72.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "94213"], ["username", "ar4179"], ["name", "Aryan Ray"], ["contact_information", "ar4179@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.7], ["created_at", "2023-10-28 22:13:38.777730"], ["updated_at", "2023-10-28 22:13:38.777730"]]
+  [1m[36m (70.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "agm2208"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '67890'\n- '15842'\n"], ["updated_at", "2023-10-28 22:13:38.863585"], ["id", 1]]
+  [1m[36m (65.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "ag4049"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '12345'\n- '15842'\n"], ["updated_at", "2023-10-28 22:13:38.935219"], ["id", 2]]
+  [1m[36m (63.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "jzm2103"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mSQL (0.5ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '12345'\n- '67890'\n"], ["updated_at", "2023-10-28 22:13:39.006049"], ["id", 3]]
+  [1m[36m (66.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "ar4179"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:17:23.759913"], ["updated_at", "2023-10-28 22:17:23.759913"]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:20:39.688746"], ["updated_at", "2023-10-28 22:20:39.688746"]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:22:13 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:22:13 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  Rendered goods_services/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 39.9ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:22:44.941780"], ["updated_at", "2023-10-28 22:22:44.941780"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (65.2ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (71.8ms)[0m  [1mCREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")[0m
+  [1m[35m (70.8ms)[0m  CREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (70.3ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35m (69.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (70.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (65.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20231024225439')[0m
+  [1m[35m (68.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20231024225438')
+  [1m[36m (67.1ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (73.9ms)[0m  [1mCREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")[0m
+  [1m[35m (73.0ms)[0m  CREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (65.7ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35m (65.1ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (73.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (64.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20231024225439')[0m
+  [1m[35m (67.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20231024225438')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:23:13.124438"], ["updated_at", "2023-10-28 22:23:13.124438"]]
+  [1m[35m (84.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "67890"], ["username", "ag4049"], ["name", "Avantika Garg"], ["contact_information", "ag4049@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 2.2], ["created_at", "2023-10-28 22:23:13.211357"], ["updated_at", "2023-10-28 22:23:13.211357"]]
+  [1m[36m (84.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "15842"], ["username", "jzm2103"], ["name", "Joshua Mei"], ["contact_information", "jzm2103@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 3.2], ["created_at", "2023-10-28 22:23:13.298011"], ["updated_at", "2023-10-28 22:23:13.298011"]]
+  [1m[35m (65.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "94213"], ["username", "ar4179"], ["name", "Aryan Ray"], ["contact_information", "ar4179@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.7], ["created_at", "2023-10-28 22:23:13.365830"], ["updated_at", "2023-10-28 22:23:13.365830"]]
+  [1m[36m (68.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "agm2208"]]
+  [1m[36mUserInformation Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '67890'\n- '15842'\n"], ["updated_at", "2023-10-28 22:23:13.456245"], ["id", 1]]
+  [1m[36m (63.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "ag4049"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mSQL (0.4ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '12345'\n- '15842'\n"], ["updated_at", "2023-10-28 22:23:13.525831"], ["id", 2]]
+  [1m[36m (68.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "jzm2103"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '12345'\n- '67890'\n"], ["updated_at", "2023-10-28 22:23:13.599863"], ["id", 3]]
+  [1m[36m (64.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "ar4179"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "12345"], ["name", "Bike"], ["category", 0], ["description", "Mountain bike, 21 gears"], ["created_at", "2023-10-28 22:23:13.676607"], ["updated_at", "2023-10-28 22:23:13.676607"]]
+  [1m[36m (94.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "67890"], ["name", "Textbooks"], ["category", 0], ["description", "Various textbooks for sale"], ["created_at", "2023-10-28 22:23:13.773918"], ["updated_at", "2023-10-28 22:23:13.773918"]]
+  [1m[35m (48.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "15842"], ["name", "Laptop Repair"], ["category", 1], ["description", "Expert laptop repair services"], ["created_at", "2023-10-28 22:23:13.824937"], ["updated_at", "2023-10-28 22:23:13.824937"]]
+  [1m[36m (49.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "Mini Fridge"], ["category", 0], ["description", "Mini fridge, freezer, and microwave set"], ["created_at", "2023-10-28 22:23:13.876904"], ["updated_at", "2023-10-28 22:23:13.876904"]]
+  [1m[35m (50.2ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:23:20.939906"], ["updated_at", "2023-10-28 22:23:20.939906"]]
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (65.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (74.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUserInformations (20231024225438)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225438_create_user_informations.rb:12)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231024225438"]]
+  [1m[36m (75.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225439_create_goods_and_services.rb:8)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231024225439"]]
+  [1m[35m (67.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:25:09.797832"], ["updated_at", "2023-10-28 22:25:09.797832"]]
+  [1m[36m (75.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "67890"], ["username", "ag4049"], ["name", "Avantika Garg"], ["contact_information", "ag4049@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 2.2], ["created_at", "2023-10-28 22:25:09.876121"], ["updated_at", "2023-10-28 22:25:09.876121"]]
+  [1m[35m (69.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "15842"], ["username", "jzm2103"], ["name", "Joshua Mei"], ["contact_information", "jzm2103@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 3.2], ["created_at", "2023-10-28 22:25:09.948013"], ["updated_at", "2023-10-28 22:25:09.948013"]]
+  [1m[36m (76.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["username", "ar4179"], ["name", "Aryan Ray"], ["contact_information", "ar4179@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.7], ["created_at", "2023-10-28 22:25:10.027146"], ["updated_at", "2023-10-28 22:25:10.027146"]]
+  [1m[35m (69.1ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "agm2208"]]
+  [1m[35mUserInformation Exists (0.2ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '67890'\n- '15842'\n"], ["updated_at", "2023-10-28 22:25:10.115086"], ["id", 1]]
+  [1m[35m (74.4ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "ag4049"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '15842'\n"], ["updated_at", "2023-10-28 22:25:10.194846"], ["id", 2]]
+  [1m[35m (64.4ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "jzm2103"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '67890'\n"], ["updated_at", "2023-10-28 22:25:10.264437"], ["id", 3]]
+  [1m[35m (65.1ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "ar4179"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["name", "Bike"], ["category", 0], ["description", "Mountain bike, 21 gears"], ["created_at", "2023-10-28 22:25:10.340954"], ["updated_at", "2023-10-28 22:25:10.340954"]]
+  [1m[35m (70.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "67890"], ["name", "Textbooks"], ["category", 0], ["description", "Various textbooks for sale"], ["created_at", "2023-10-28 22:25:10.413811"], ["updated_at", "2023-10-28 22:25:10.413811"]]
+  [1m[36m (65.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "15842"], ["name", "Laptop Repair"], ["category", 1], ["description", "Expert laptop repair services"], ["created_at", "2023-10-28 22:25:10.480571"], ["updated_at", "2023-10-28 22:25:10.480571"]]
+  [1m[35m (66.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "94213"], ["name", "Mini Fridge"], ["category", 0], ["description", "Mini fridge, freezer, and microwave set"], ["created_at", "2023-10-28 22:25:10.548868"], ["updated_at", "2023-10-28 22:25:10.548868"]]
+  [1m[36m (68.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:25:19 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:25:20 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services"
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1[0m  [["id", 12345]]
+  Rendered goods_services/index.html.erb within layouts/application (55.0ms)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    35:     <% @goods_services.each do |goods_service| %>
+    36:         <tr>
+    37:             <td><%= goods_service.name %></td>
+    38:             <td><%= goods_service.user.name %></td>
+    39:             <td><%= goods_service.type == 0 ? "Good" : "Service" %></td>
+    40:         </tr>
+    41:     <% end %>
+  app/views/goods_services/index.html.erb:38:in `block in _app_views_goods_services_index_html_erb___907771730162660412_70262518946800'
+  app/views/goods_services/index.html.erb:35:in `_app_views_goods_services_index_html_erb___907771730162660412_70262518946800'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (23.4ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:27:49 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:27:49 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  Rendered goods_services/index.html.erb within layouts/application (4.4ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `type' for #<GoodsAndService:0x00007fce89cac2b8>):
+    36:         <tr>
+    37:             <td><%= goods_service.name %></td>
+    38:             <td><%= goods_service.user_id %></td>
+    39:             <td><%= goods_service.type == 0 ? "Good" : "Service" %></td>
+    40:         </tr>
+    41:     <% end %>
+    42:     <% else %>
+  app/views/goods_services/index.html.erb:39:in `block in _app_views_goods_services_index_html_erb___907771730162660412_70262525835120'
+  app/views/goods_services/index.html.erb:35:in `_app_views_goods_services_index_html_erb___907771730162660412_70262525835120'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.9ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:28:07 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:28:08 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  Rendered goods_services/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:28:27 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:28:28 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  Rendered goods_services/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:28:38 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:28:39 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  Rendered goods_services/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `username' for #<GoodsAndService:0x00007fce89eb9df8>):
+    35:     <% @goods_services.each do |goods_service| %>
+    36:         <tr>
+    37:             <td><%= goods_service.name %></td>
+    38:             <td><%= goods_service.username %></td>
+    39:             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+    40:         </tr>
+    41:     <% end %>
+  app/views/goods_services/index.html.erb:38:in `block in _app_views_goods_services_index_html_erb___907771730162660412_70262526908480'
+  app/views/goods_services/index.html.erb:35:in `_app_views_goods_services_index_html_erb___907771730162660412_70262526908480'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:28:49 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:28:49 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1  [["id", 12345]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1[0m  [["id", 67890]]
+  [1m[35mUserInformation Load (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1  [["id", 15842]]
+  [1m[36mUserInformation Load (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1[0m  [["id", 94213]]
+  Rendered goods_services/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:31:27 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:31:27 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1  [["id", 12345]]
+  Rendered goods_services/index.html.erb within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    35:     <% @goods_services.each do |goods_service| %>
+    36:         <tr>
+    37:             <td><%= goods_service.name %></td>
+    38:             <td><%= goods_service.user.name %></td>
+    39:             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+    40:         </tr>
+    41:     <% end %>
+  app/views/goods_services/index.html.erb:38:in `block in _app_views_goods_services_index_html_erb___907771730162660412_70262511473160'
+  app/views/goods_services/index.html.erb:35:in `_app_views_goods_services_index_html_erb___907771730162660412_70262511473160'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.2ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:32:07 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:32:07 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services"
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1[0m  [["id", 12345]]
+  Rendered goods_services/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    35:     <% @goods_services.each do |goods_service| %>
+    36:         <tr>
+    37:             <td><%= goods_service.name %></td>
+    38:             <td><%= goods_service.user.name %></td>
+    39:             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+    40:         </tr>
+    41:     <% end %>
+  app/views/goods_services/index.html.erb:38:in `block in _app_views_goods_services_index_html_erb___907771730162660412_70262511473160'
+  app/views/goods_services/index.html.erb:35:in `_app_views_goods_services_index_html_erb___907771730162660412_70262511473160'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.1ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:32:43 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:32:43 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1  [["id", 12345]]
+  Rendered goods_services/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    35:     <% @goods_services.each do |goods_service| %>
+    36:         <tr>
+    37:             <td><%= goods_service.name %></td>
+    38:             <td><%= goods_service.user.name %></td>
+    39:             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+    40:         </tr>
+    41:     <% end %>
+  app/views/goods_services/index.html.erb:38:in `block in _app_views_goods_services_index_html_erb___907771730162660412_70262511473160'
+  app/views/goods_services/index.html.erb:35:in `_app_views_goods_services_index_html_erb___907771730162660412_70262511473160'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.5ms)
+  [1m[36m (66.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (63.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUserInformations (20231024225438)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225438_create_user_informations.rb:12)
+  [1m[35m (0.5ms)[0m  CREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231024225438"]]
+  [1m[36m (62.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225439_create_goods_and_services.rb:8)
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231024225439"]]
+  [1m[35m (66.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:32:57.211791"], ["updated_at", "2023-10-28 22:32:57.211791"]]
+  [1m[36m (65.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "67890"], ["username", "ag4049"], ["name", "Avantika Garg"], ["contact_information", "ag4049@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 2.2], ["created_at", "2023-10-28 22:32:57.279614"], ["updated_at", "2023-10-28 22:32:57.279614"]]
+  [1m[35m (65.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "15842"], ["username", "jzm2103"], ["name", "Joshua Mei"], ["contact_information", "jzm2103@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 3.2], ["created_at", "2023-10-28 22:32:57.347580"], ["updated_at", "2023-10-28 22:32:57.347580"]]
+  [1m[36m (67.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["username", "ar4179"], ["name", "Aryan Ray"], ["contact_information", "ar4179@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.7], ["created_at", "2023-10-28 22:32:57.417328"], ["updated_at", "2023-10-28 22:32:57.417328"]]
+  [1m[35m (60.0ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "agm2208"]]
+  [1m[35mUserInformation Exists (0.2ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '67890'\n- '15842'\n"], ["updated_at", "2023-10-28 22:32:57.494267"], ["id", 1]]
+  [1m[35m (69.9ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "ag4049"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '15842'\n"], ["updated_at", "2023-10-28 22:32:57.569605"], ["id", 2]]
+  [1m[35m (60.2ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "jzm2103"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '67890'\n"], ["updated_at", "2023-10-28 22:32:57.634447"], ["id", 3]]
+  [1m[35m (66.9ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "ar4179"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["name", "Bike"], ["category", 0], ["description", "Mountain bike, 21 gears"], ["created_at", "2023-10-28 22:32:57.711839"], ["updated_at", "2023-10-28 22:32:57.711839"]]
+  [1m[35m (61.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "12345"], ["name", "Tutoring"], ["category", 1], ["description", "Math and science tutoring"], ["created_at", "2023-10-28 22:32:57.775041"], ["updated_at", "2023-10-28 22:32:57.775041"]]
+  [1m[36m (65.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "67890"], ["name", "Textbooks"], ["category", 0], ["description", "Various textbooks for sale"], ["created_at", "2023-10-28 22:32:57.842358"], ["updated_at", "2023-10-28 22:32:57.842358"]]
+  [1m[35m (65.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "15842"], ["name", "Laptop Repair"], ["category", 1], ["description", "Expert laptop repair services"], ["created_at", "2023-10-28 22:32:57.910488"], ["updated_at", "2023-10-28 22:32:57.910488"]]
+  [1m[36m (62.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "Mini Fridge"], ["category", 0], ["description", "Mini fridge, freezer, and microwave set"], ["created_at", "2023-10-28 22:32:57.975324"], ["updated_at", "2023-10-28 22:32:57.975324"]]
+  [1m[35m (60.3ms)[0m  commit transaction
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:33:00 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:33:00 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services"
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1[0m  [["id", 12345]]
+  Rendered goods_services/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    35:     <% @goods_services.each do |goods_service| %>
+    36:         <tr>
+    37:             <td><%= goods_service.name %></td>
+    38:             <td><%= goods_service.user.name %></td>
+    39:             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+    40:         </tr>
+    41:     <% end %>
+  app/views/goods_services/index.html.erb:38:in `block in _app_views_goods_services_index_html_erb___907771730162660412_70262511473160'
+  app/views/goods_services/index.html.erb:35:in `_app_views_goods_services_index_html_erb___907771730162660412_70262511473160'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:33:30 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:33:30 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1  [["id", 12345]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1[0m  [["id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1  [["id", 67890]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1[0m  [["id", 15842]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1  [["id", 94213]]
+  Rendered goods_services/index.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services"  ORDER BY "goods_and_services"."id" ASC LIMIT 1[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."id" = ? LIMIT 1  [["id", 12345]]
+  [1m[36m (78.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (66.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUserInformations (20231024225438)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225438_create_user_informations.rb:12)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231024225438"]]
+  [1m[36m (69.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/rottenpotatoes/db/migrate/20231024225439_create_goods_and_services.rb:8)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231024225439"]]
+  [1m[35m (66.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-10-28 22:37:33.546186"], ["updated_at", "2023-10-28 22:37:33.546186"]]
+  [1m[36m (65.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "67890"], ["username", "ag4049"], ["name", "Avantika Garg"], ["contact_information", "ag4049@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 2.2], ["created_at", "2023-10-28 22:37:33.614661"], ["updated_at", "2023-10-28 22:37:33.614661"]]
+  [1m[35m (66.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "15842"], ["username", "jzm2103"], ["name", "Joshua Mei"], ["contact_information", "jzm2103@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 3.2], ["created_at", "2023-10-28 22:37:33.683094"], ["updated_at", "2023-10-28 22:37:33.683094"]]
+  [1m[36m (71.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["username", "ar4179"], ["name", "Aryan Ray"], ["contact_information", "ar4179@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.7], ["created_at", "2023-10-28 22:37:33.757075"], ["updated_at", "2023-10-28 22:37:33.757075"]]
+  [1m[35m (68.8ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "agm2208"]]
+  [1m[35mUserInformation Exists (0.2ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '67890'\n- '15842'\n"], ["updated_at", "2023-10-28 22:37:33.841754"], ["id", 1]]
+  [1m[35m (68.7ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "ag4049"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '15842'\n"], ["updated_at", "2023-10-28 22:37:33.916056"], ["id", 2]]
+  [1m[35m (63.4ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "jzm2103"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '67890'\n"], ["updated_at", "2023-10-28 22:37:33.984718"], ["id", 3]]
+  [1m[35m (67.2ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "ar4179"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["name", "Bike"], ["category", 0], ["description", "Mountain bike, 21 gears"], ["created_at", "2023-10-28 22:37:34.062686"], ["updated_at", "2023-10-28 22:37:34.062686"]]
+  [1m[35m (65.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "12345"], ["name", "Tutoring"], ["category", 1], ["description", "Math and science tutoring"], ["created_at", "2023-10-28 22:37:34.130889"], ["updated_at", "2023-10-28 22:37:34.130889"]]
+  [1m[36m (63.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "67890"], ["name", "Textbooks"], ["category", 0], ["description", "Various textbooks for sale"], ["created_at", "2023-10-28 22:37:34.195934"], ["updated_at", "2023-10-28 22:37:34.195934"]]
+  [1m[35m (66.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "15842"], ["name", "Laptop Repair"], ["category", 1], ["description", "Expert laptop repair services"], ["created_at", "2023-10-28 22:37:34.264228"], ["updated_at", "2023-10-28 22:37:34.264228"]]
+  [1m[36m (73.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "Mini Fridge"], ["category", 0], ["description", "Mini fridge, freezer, and microwave set"], ["created_at", "2023-10-28 22:37:34.340787"], ["updated_at", "2023-10-28 22:37:34.340787"]]
+  [1m[35m (62.7ms)[0m  commit transaction
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services"  ORDER BY "goods_and_services"."id" ASC LIMIT 1[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:37:54 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:37:55 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services"
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:39:32 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:39:32 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (5.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&categories%5BGood%5D=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:39:37 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "categories"=>{"Good"=>"1"}, "commit"=>"Refresh"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" = 0[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" = 0
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&categories%5BService%5D=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:39:48 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "categories"=>{"Service"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" = 1
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" = 1[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  Rendered goods_services/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:40:03 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=bike&commit=Search" for 209.2.226.165 at 2023-10-28 22:40:09 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bike", "commit"=>"Search"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services"
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=bike&commit=Search" for 209.2.226.165 at 2023-10-28 22:40:11 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bike", "commit"=>"Search"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=bike&commit=Search" for 209.2.226.165 at 2023-10-28 22:40:12 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bike", "commit"=>"Search"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services"
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&categories%5BService%5D=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:40:37 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "categories"=>{"Service"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" = 1
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" = 1[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  Rendered goods_services/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:40:39 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services"
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:40:40 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services"[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services"
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.3ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:43:23 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:43:23 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (17.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:43:26 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&categories%5BGood%5D=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:43:27 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "categories"=>{"Good"=>"1"}, "commit"=>"Refresh"}
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" = 0
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" = 0[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&categories%5BService%5D=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:43:30 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "categories"=>{"Service"=>"1"}, "commit"=>"Refresh"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" = 1[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" = 1
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  Rendered goods_services/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 22:43:35 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=bike&commit=Search" for 209.2.226.165 at 2023-10-28 22:43:37 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"bike", "commit"=>"Search"}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE (name ILIKE '%bike%') AND "goods_and_services"."category" IN (0, 1)
+  Rendered goods_services/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (SQLite3::SQLException: near "ILIKE": syntax error: SELECT COUNT(*) FROM "goods_and_services" WHERE (name ILIKE '%bike%') AND "goods_and_services"."category" IN (0, 1)):
+    31:     </tr>
+    32:   </thead>
+    33:   <tbody>
+    34:     <% if @goods_services.any? %>
+    35:     <% @goods_services.each do |goods_service| %>
+    36:         <tr>
+    37:             <td><%= goods_service.name %></td>
+  app/views/goods_services/index.html.erb:34:in `_app_views_goods_services_index_html_erb___907771730162660412_46958401966340'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.3ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 22:44:20 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 22:44:20 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=textbooks&commit=Search" for 209.2.226.165 at 2023-10-28 22:44:24 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"textbooks", "commit"=>"Search"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE (name LIKE '%textbooks%') AND "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE (name LIKE '%textbooks%') AND "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  Rendered goods_services/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=haircut&commit=Search" for 209.2.226.165 at 2023-10-28 22:44:41 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"haircut", "commit"=>"Search"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE (name LIKE '%haircut%') AND "goods_and_services"."category" IN (0, 1)[0m
+  Rendered goods_services/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=haircut&commit=Search" for 209.2.226.165 at 2023-10-28 22:44:42 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"haircut", "commit"=>"Search"}
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE (name LIKE '%haircut%') AND "goods_and_services"."category" IN (0, 1)
+  Rendered goods_services/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 209.2.226.165 at 2023-10-28 22:44:42 +0000
+
+
+Started GET "/assets/application.self-3a1ae05f99b4f97f4da513db02a362a8c77d0bc57eeb23e5b2d6cfa2e1bf5cc2.css?body=1" for 209.2.226.165 at 2023-10-28 22:44:43 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 209.2.226.165 at 2023-10-28 22:44:43 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 209.2.226.165 at 2023-10-28 22:44:43 +0000

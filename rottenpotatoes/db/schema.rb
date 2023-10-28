@@ -11,32 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20231024225438) do
+ActiveRecord::Schema.define(version: 20231024225439) do
 
-    create_table "user_information", force: :cascade do |t|
-      t.string   "user_id", null: false
-      t.string   "username", null: false
-      t.string   "name", null: false
-      t.string   "contact_information", null: false
-      t.string   "address"
-      t.float    "rating"
-      t.string   "photo_url"
-      t.text     "friends", array: true, default: []
-      t.datetime "created_at"
-      t.datetime "updated_at"
-    end
-  
-    add_index "user_information", ["user_id"], unique: true
-  
-    create_table "goods_and_services", force: :cascade do |t|
-      t.string   "user_id", null: false
-      t.string   "name", null: false
-      t.integer  "type"
-      t.text     "description"
-      t.datetime "created_at"
-      t.datetime "updated_at"
-    end
-  
-    add_index "goods_and_services", ["user_id"]
-  
+  create_table "goods_and_services", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "name"
+    t.integer  "category"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
+
+  add_index "goods_and_services", ["user_id"], name: "index_goods_and_services_on_user_id"
+
+  create_table "user_informations", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "username"
+    t.string   "name"
+    t.string   "contact_information"
+    t.string   "address"
+    t.float    "rating"
+    t.string   "photo_url"
+    t.text     "friends",             default: "--- []\n"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_informations", ["user_id"], name: "index_user_informations_on_user_id", unique: true
+
+end

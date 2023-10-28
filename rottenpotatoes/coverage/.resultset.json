@@ -109,13 +109,13 @@
   },
   "RSpec": {
     "coverage": {
-      "/home/codio/workspace/hw-acceptance-unit-test-cycle/rottenpotatoes/app/helpers/application_helper.rb": {
+      "/home/codio/workspace/eggs/rottenpotatoes/app/helpers/application_helper.rb": {
         "lines": [
           1,
           null
         ]
       },
-      "/home/codio/workspace/hw-acceptance-unit-test-cycle/rottenpotatoes/app/helpers/movies_helper.rb": {
+      "/home/codio/workspace/eggs/rottenpotatoes/app/helpers/movies_helper.rb": {
         "lines": [
           1,
           null,
@@ -125,94 +125,143 @@
           null
         ]
       },
-      "/home/codio/workspace/hw-acceptance-unit-test-cycle/rottenpotatoes/app/controllers/movies_controller.rb": {
+      "/home/codio/workspace/eggs/rottenpotatoes/app/controllers/application_controller.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          0,
           0,
           null,
           null,
-          null,
-          1,
           0,
-          null,
-          null,
-          1,
-          null,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          0,
-          0,
-          0,
-          0,
-          null,
-          null,
-          1,
-          2,
-          2,
-          2,
-          2,
-          1,
-          1,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          null,
-          1,
-          0,
-          null,
-          null,
-          null
-        ]
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/codio/workspace/hw-acceptance-unit-test-cycle/rottenpotatoes/app/controllers/application_controller.rb": {
+      "/home/codio/workspace/eggs/rottenpotatoes/app/controllers/goods_services_controller.rb": {
         "lines": [
-          1,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
           null,
           null,
-          1,
-          null
-        ]
+          0,
+          0,
+          0,
+          null,
+          0
+        ],
+        "branches": {
+        }
       },
-      "/home/codio/workspace/hw-acceptance-unit-test-cycle/rottenpotatoes/app/models/movie.rb": {
+      "/home/codio/workspace/eggs/rottenpotatoes/app/models/user_information.rb": {
         "lines": [
-          1,
-          1,
-          2,
+          0,
+          0,
+          0,
+          0,
           null,
           null,
-          1,
-          2,
           null,
-          null
-        ]
+          0,
+          0,
+          null,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0
+        ],
+        "branches": {
+        }
+      },
+      "/home/codio/workspace/eggs/rottenpotatoes/app/models/goods_and_service.rb": {
+        "lines": [
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "branches": {
+        }
       }
     },
-    "timestamp": 1698195370
+    "timestamp": 1698528875
   }
 }
