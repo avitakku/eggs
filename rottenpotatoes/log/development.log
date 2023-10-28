@@ -48,3 +48,1066 @@ Migrating to AddDirectorToMovies (20231024225438)
   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (61.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20231024225438')
   [1m[36m (70.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:01:29 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:01:30 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 410ms (Views: 382.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 209.2.226.165 at 2023-10-28 19:01:30 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 209.2.226.165 at 2023-10-28 19:01:30 +0000
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 209.2.226.165 at 2023-10-28 19:01:30 +0000
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 209.2.226.165 at 2023-10-28 19:01:31 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:13:37 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:13:38 +0000
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: <%= form_tag movies_path, method: :get, id: 'ratings_form' do %>
+    5:   <%= hidden_field_tag :home, 1 %>
+    6:   Include:
+    7:   <% @all_ratings.each do |rating| %>
+    8:     <div class="form-check  form-check-inline">
+    9:       <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
+   10:       <%= check_box_tag "ratings[#{rating}]", "1",  @ratings_to_show.include?(rating), class: 'form-check-input' %>
+  app/views/movies/index.html.erb:7:in `block in _app_views_movies_index_html_erb__580139040556865533_70190137986380'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb__580139040556865533_70190137986380'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.6ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:15:22 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:15:22 +0000
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: <%= form_tag movies_path, method: :get, id: 'ratings_form' do %>
+    5:   <%= hidden_field_tag :home, 1 %>
+    6:   Include:
+    7:   <% @all_ratings.each do |rating| %>
+    8:     <div class="form-check  form-check-inline">
+    9:       <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
+   10:       <%= check_box_tag "ratings[#{rating}]", "1",  @ratings_to_show.include?(rating), class: 'form-check-input' %>
+  app/views/movies/index.html.erb:7:in `block in _app_views_movies_index_html_erb__580139040556865533_70190137986380'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb__580139040556865533_70190137986380'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.3ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:15:36 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:15:37 +0000
+Processing by MoviesController#index as HTML
+  Rendered movies/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    4: <%= form_tag movies_path, method: :get, id: 'ratings_form' do %>
+    5:   <%= hidden_field_tag :home, 1 %>
+    6:   Include:
+    7:   <% @all_ratings.each do |rating| %>
+    8:     <div class="form-check  form-check-inline">
+    9:       <%= label_tag "ratings[#{rating}]", rating, class: 'form-check-label' %>
+   10:       <%= check_box_tag "ratings[#{rating}]", "1",  @ratings_to_show.include?(rating), class: 'form-check-input' %>
+  app/views/movies/index.html.erb:7:in `block in _app_views_movies_index_html_erb___1995798021623122530_69898281570360'
+  app/views/movies/index.html.erb:4:in `_app_views_movies_index_html_erb___1995798021623122530_69898281570360'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.7ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:17:19 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:17:19 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 323ms (Views: 318.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&home=1&ratings%5BPG%5D=1&ratings%5BR%5D=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 19:17:28 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "ratings"=>{"PG"=>"1", "R"=>"1"}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')
+  Rendered movies/index.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:20:04 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:20:04 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'R')[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?home=1&sort=title" for 209.2.226.165 at 2023-10-28 19:20:11 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"home"=>"1", "sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?home=1&sort=release_date" for 209.2.226.165 at 2023-10-28 19:20:12 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"home"=>"1", "sort"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY "movies"."release_date" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?home=1&sort=title" for 209.2.226.165 at 2023-10-28 19:20:15 +0000
+Processing by MoviesController#index as HTML
+  Parameters: {"home"=>"1", "sort"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:21:03 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:21:03 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:24:33 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:24:33 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:26:54 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:26:54 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (14.8ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `goods_services_path' for #<#<Class:0x00007f24ed3315d0>:0x00007f24ed790360>):
+    2: 
+    3: <!-- Search Bar for Goods/Services -->
+    4: <div class="mb-3">
+    5:   <%= form_tag goods_services_path, method: :get, class: 'form-inline' do %>
+    6:     <%= text_field_tag :query, params[:query], placeholder: "Search goods/services...", class: 'form-control mr-2' %>
+    7:     <%= submit_tag 'Search', class: 'btn btn-secondary' %>
+    8:   <% end %>
+  app/views/movies/index.html.erb:5:in `_app_views_movies_index_html_erb___1995798021623122530_69898289859400'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:27:45 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:27:46 +0000
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies"  ORDER BY "movies"."title" ASC
+  Rendered movies/index.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `goods_services_path' for #<#<Class:0x00007f24ed3315d0>:0x00007f24ed84b930>):
+    2: 
+    3: <!-- Search Bar for Goods/Services -->
+    4: <div class="mb-3">
+    5:   <%= form_tag goods_services_path, method: :get, class: 'form-inline' do %>
+    6:     <%= text_field_tag :query, params[:query], placeholder: "Search goods/services...", class: 'form-control mr-2' %>
+    7:     <%= submit_tag 'Search', class: 'btn btn-secondary' %>
+    8:   <% end %>
+  app/views/movies/index.html.erb:5:in `_app_views_movies_index_html_erb___1995798021623122530_69898289859400'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (17.2ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:28:09 +0000
+
+
+Started GET "/movies" for 209.2.226.165 at 2023-10-28 19:28:10 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies"  ORDER BY "movies"."title" ASC[0m
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:34:31 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:34:31 +0000
+
+ActionController::RoutingError (uninitialized constant GoodsServicesController):
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.10) lib/rack/etag.rb:24:in `call'
+  rack (1.6.10) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.10) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.10) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.10) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.10) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.10) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.10) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.10) lib/rack/lock.rb:17:in `call'
+  rack (1.6.10) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.10) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (37.4ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:35:58 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:35:58 +0000
+
+SyntaxError (/home/codio/workspace/eggs/rottenpotatoes/app/controllers/goods_services_controller.rb:113: syntax error, unexpected end, expecting end-of-input):
+  app/controllers/goods_services_controller.rb:113: syntax error, unexpected end, expecting end-of-input
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:36:48 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:36:48 +0000
+Processing by GoodsServicesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+LoadError (Unable to autoload constant GoodsService, expected /home/codio/workspace/eggs/rottenpotatoes/app/models/goods_service.rb to define it):
+  app/controllers/goods_services_controller.rb:10:in `index'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.9ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:38:03 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:38:03 +0000
+Processing by GoodsServicesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant GoodsServicesController::GoodsService):
+  app/controllers/goods_services_controller.rb:10:in `index'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.5ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:38:29 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:38:29 +0000
+Processing by GoodsServicesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant GoodsServicesController::Movie):
+  app/controllers/goods_services_controller.rb:46:in `index'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.8ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:39:57 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:39:57 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    12: <%= form_tag goods_services_path, method: :get, id: 'filters_form' do %>
+    13:   <%= hidden_field_tag :home, 1 %>
+    14:   Include:
+    15:   <% @all_categories.each do |category| %> <!-- This is just a placeholder. You might need to adjust this based on your actual model attributes. -->
+    16:     <div class="form-check form-check-inline">
+    17:       <%= label_tag "categories[#{category}]", category, class: 'form-check-label' %>
+    18:       <%= check_box_tag "categories[#{category}]", "1", @categories_to_show.include?(category), class: 'form-check-input' %>
+  app/views/goods_services/index.html.erb:15:in `block in _app_views_goods_services_index_html_erb__4476841051510824073_69898284265040'
+  app/views/goods_services/index.html.erb:12:in `_app_views_goods_services_index_html_erb__4476841051510824073_69898284265040'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.4ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:47:44 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:47:44 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:50:19 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:50:20 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=&commit=Search" for 209.2.226.165 at 2023-10-28 19:50:23 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"", "commit"=>"Search"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 19:50:24 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 19:50:25 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?home=1&sort=connection" for 209.2.226.165 at 2023-10-28 19:50:26 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"home"=>"1", "sort"=>"connection"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?home=1&sort=name" for 209.2.226.165 at 2023-10-28 19:50:26 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"home"=>"1", "sort"=>"name"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:50:43 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:50:43 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:51:27 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:51:27 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=&commit=Search" for 209.2.226.165 at 2023-10-28 19:52:37 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"", "commit"=>"Search"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=&commit=Search" for 209.2.226.165 at 2023-10-28 19:52:40 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"", "commit"=>"Search"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 19:55:29 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 19:55:29 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:00:35 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:00:36 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0217471e0fc55f9df6482abc3c711b499a885ae70e9aa493c0228e6f96232b89.css?body=1" for 209.2.226.165 at 2023-10-28 20:00:36 +0000
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 20:00:42 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 20:00:43 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=&commit=Search" for 209.2.226.165 at 2023-10-28 20:00:44 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"", "commit"=>"Search"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:02:25 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:02:25 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4cc001688b99a3071e548183cc8beb0e68afc29eb50f885a1a364589f2fcf7cd.css?body=1" for 209.2.226.165 at 2023-10-28 20:02:25 +0000
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&home=1&commit=Refresh" for 209.2.226.165 at 2023-10-28 20:02:33 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "home"=>"1", "commit"=>"Refresh"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=&commit=Search" for 209.2.226.165 at 2023-10-28 20:02:35 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"", "commit"=>"Search"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services?utf8=%E2%9C%93&query=&commit=Search" for 209.2.226.165 at 2023-10-28 20:02:36 +0000
+Processing by GoodsServicesController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"", "commit"=>"Search"}
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:05:01 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:05:01 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-7af76db5064b797eed3330162c7e1b3129cf4ee14c4163e83bb8a59d62da142b.css?body=1" for 209.2.226.165 at 2023-10-28 20:05:01 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:05:39 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:05:39 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-22a051c7c68f68c08975cbd9749dea908f9474b58460158fcf964a623335ec87.css?body=1" for 209.2.226.165 at 2023-10-28 20:05:39 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:05:56 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:05:56 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:08:25 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:08:25 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-2e72021a35da69e28574547797ba12c08cdf993048a00893af11d60ee7d7887d.css?body=1" for 209.2.226.165 at 2023-10-28 20:08:25 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:08:47 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:08:48 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:10:10 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:10:11 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:10:24 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:10:24 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-9009cb645684aad53e718ee36b1868d3c0e4fbf018360b7b84079dfee7bef3ca.css?body=1" for 209.2.226.165 at 2023-10-28 20:10:24 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:10:26 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:11:19 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:11:19 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f7a811669abd2d8754a2e4845c79009d252e5671b6c8230a865901e78be1c213.css?body=1" for 209.2.226.165 at 2023-10-28 20:11:19 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:12:19 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:12:20 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:13:22 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:13:22 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:13:55 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:13:56 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c9ce9cff5b9cac1a1b370d1f1770558f9d738b95b8466580878b0ba90e6f51f8.css?body=1" for 209.2.226.165 at 2023-10-28 20:13:56 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:14:02 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:14:02 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (15.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:14:53 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:14:54 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-c9054b73c63f417ede45a7fbd3407168a1ae7b5bf5d1735f105a8e7ec3fa6996.css?body=1" for 209.2.226.165 at 2023-10-28 20:14:54 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:15:11 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:15:11 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4425a19f30b60810099f960a9b30e92e93a2a7b4bd14a3fbc78cb1b543cdb80d.css?body=1" for 209.2.226.165 at 2023-10-28 20:15:11 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:16:28 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:16:28 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-bf08e59e350d052acd7294a6ca2ed7b6a41ecf369e9c6b2505cb199be3e229e9.css?body=1" for 209.2.226.165 at 2023-10-28 20:16:29 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:17:01 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:17:01 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1bdb5f1e925228e462f234d79ad650d325518a5246107eced730208894efda27.css?body=1" for 209.2.226.165 at 2023-10-28 20:17:01 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:17:12 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:17:12 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-60fd1b60b994c4325e35c53a06ee99ea0be9562c45f1a8d20a2f79365a19df68.css?body=1" for 209.2.226.165 at 2023-10-28 20:17:13 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:17:55 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:17:56 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d9cb34f671df50cff1cb5a18e1116fe882e9cf8ea4e50a2ebf3baedb8fb0f6e3.css?body=1" for 209.2.226.165 at 2023-10-28 20:17:56 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:18:24 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:18:24 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-3bb4b0e9ad6ffc2effc963078e090ac93938cfc1d5f1494a48cceb8875f60b2d.css?body=1" for 209.2.226.165 at 2023-10-28 20:18:24 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:18:41 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:18:42 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-887655ab37ce7a032fd2c8612ae0e2d13ee129043b2bd3506a3bd5d7035b237c.css?body=1" for 209.2.226.165 at 2023-10-28 20:18:42 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:18:51 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:18:51 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0cc0396bbe2786da38ab0350cd60f15e25519d15f761ffac672a7451bc8ac265.css?body=1" for 209.2.226.165 at 2023-10-28 20:18:51 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:18:59 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:18:59 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fa66f2b57e8538689c99afa21989aed4165317ed7701280b86c906434905d67e.css?body=1" for 209.2.226.165 at 2023-10-28 20:19:00 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:19:28 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:19:28 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-8e7e4b98045725c0222eb196e9bb94531a45735095e462bad526f7c00ff9838f.css?body=1" for 209.2.226.165 at 2023-10-28 20:19:29 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:19:58 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:19:58 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b2574d3f477756431d78ecc5653ad501d5c083205f291778e28860c53d57fb17.css?body=1" for 209.2.226.165 at 2023-10-28 20:19:58 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:20:20 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:20:20 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-04dad55b742878e73cfa3ca43e9b8bf1b08894c1793229e659ac47558793a1c1.css?body=1" for 209.2.226.165 at 2023-10-28 20:20:21 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:20:54 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:20:54 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-d08f2b541bd10a44250b3c71450f6a5db22b72c36803f859ab5a96603e6a47d0.css?body=1" for 209.2.226.165 at 2023-10-28 20:20:54 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:21:04 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:21:05 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-fc611fcc28014e72881c3c49c0ae4e9f083579c0ef95ee854d09605880b9833a.css?body=1" for 209.2.226.165 at 2023-10-28 20:21:05 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:21:17 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:21:17 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b652610eceba845d53c241f8f074fd8f25debbbee42f76a134e531b52d181bb5.css?body=1" for 209.2.226.165 at 2023-10-28 20:21:18 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:21:30 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:21:30 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-745dede91541ceede93020eb71c50276514d85eb64b889cb1828a779e505f9cc.css?body=1" for 209.2.226.165 at 2023-10-28 20:21:30 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:21:48 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:21:48 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-4783e937bede74e1dd3a219d12178b16a7512abd5dc5d8f4460057ab92bcf91d.css?body=1" for 209.2.226.165 at 2023-10-28 20:21:49 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:22:11 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:22:11 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-8b6401d8490c20e7bc7d667fd3c8484b479345dea38b5dcaa561f342f4a9781a.css?body=1" for 209.2.226.165 at 2023-10-28 20:22:11 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:22:34 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:22:35 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-90f067ed5d424f629dada016de3dd5815db77a79dd3e40b9a0f45e12993df4e4.css?body=1" for 209.2.226.165 at 2023-10-28 20:22:35 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:23:41 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:23:41 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:25:48 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:25:48 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-a91c2845d7a2572116581b6dcf686fd6d3c26c6073131155e72ee1d65fa8fbc7.css?body=1" for 209.2.226.165 at 2023-10-28 20:25:48 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:26:11 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:26:11 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-1dbb43a82d53fee28b9f5e1bed62a907c12f3e8b08d10d2b8bf8a416a9ed2d6e.css?body=1" for 209.2.226.165 at 2023-10-28 20:26:12 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:26:27 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:26:27 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-85af502440e3a94dbd56bf610ef1b3d946ff5d96bc7b38a1d5ca29c7ee40d3d9.css?body=1" for 209.2.226.165 at 2023-10-28 20:26:27 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:26:44 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:26:44 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-f9a6787e6e2c52ae9ef53b8b6a28869d3e286087a95833e903d06286861fb912.css?body=1" for 209.2.226.165 at 2023-10-28 20:26:44 +0000
+
+
+Started GET "/" for 209.2.226.165 at 2023-10-28 20:28:45 +0000
+
+
+Started GET "/goods_services" for 209.2.226.165 at 2023-10-28 20:28:45 +0000
+Processing by GoodsServicesController#index as HTML
+  Rendered goods_services/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-3a1ae05f99b4f97f4da513db02a362a8c77d0bc57eeb23e5b2d6cfa2e1bf5cc2.css?body=1" for 209.2.226.165 at 2023-10-28 20:28:45 +0000

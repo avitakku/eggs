@@ -1,0 +1,34 @@
+<h2>All Goods/Services</h2>
+
+<!-- Search Bar for Goods/Services -->
+<div class="mb-3">
+  <%= form_tag goods_services_path, method: :get, class: 'form-inline' do %>
+    <%= text_field_tag :query, params[:query], placeholder: "Search goods/services...", class: 'form-control mr-2' %>
+    <%= submit_tag 'Search', class: 'btn btn-secondary mr-2' %>
+    <%= link_to 'Add Friends', "#", class: 'btn btn-primary' %> <!-- Replace "#" with the appropriate path for adding friends. -->
+  <% end %>
+</div>
+
+<!-- Filter Form for Categories -->
+<%= form_tag goods_services_path, method: :get, id: 'filters_form' do %>
+  <%= hidden_field_tag :home, 1 %>
+  Include:
+  <% @all_categories.each do |category| %>
+    <div class="form-check form-check-inline">
+      <%= label_tag "categories[#{category}]", category, class: 'form-check-label' %>
+      <%= check_box_tag "categories[#{category}]", "1", @categories_to_show.include?(category), class: 'form-check-input' %>
+    </div>
+  <% end %>
+  <%= submit_tag 'Refresh', id: 'filters_submit', class: 'btn btn-primary' %>
+<% end %>
+
+<table class="table table-striped col-md-12" id="goods_services">
+  <thead>
+    <tr>
+      <th>Good/Service</th>
+      <th>Name</th>
+      <th>Connection</th>
+    </tr>
+  </thead>
+  <!-- ... -->
+</table>
