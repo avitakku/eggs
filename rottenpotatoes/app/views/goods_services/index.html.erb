@@ -6,6 +6,7 @@
     <%= text_field_tag :query, params[:query], placeholder: "Search goods/services...", class: 'form-control mr-2' %>
     <%= submit_tag 'Search', class: 'btn btn-secondary mr-2' %>
     <%= link_to 'Add Friends', "#", class: 'btn btn-primary' %> <!-- Replace "#" with the appropriate path for adding friends. -->
+    <%= link_to 'Add listing', new_goods_service_path, class: 'btn btn-primary' %> <!-- Replace "#" with the appropriate path for accessing new listing page. -->
   <% end %>
 </div>
 

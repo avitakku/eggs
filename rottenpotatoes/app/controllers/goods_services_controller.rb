@@ -6,6 +6,9 @@ class GoodsServicesController < ApplicationController
     # will render app/views/movies/show.<extension> by default
   end
 
+  def profile
+  end 
+
   def index
     @all_categories = GoodsService.all_categories
     @title = params[:sort] == 'title' ? 'hilite bg-warning' : ''
