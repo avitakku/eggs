@@ -4,6 +4,8 @@ Rottenpotatoes::Application.routes.draw do
         get 'search_connections'
       end
     end
+
+    get "profile", to: "goods_services#profile"
   
     root :to => redirect('/goods_services')
   end

@@ -1,6 +1,7 @@
 <h2>All Goods/Services</h2>
 
 <!-- Search Bar for Goods/Services -->
+<%= link_to 'Edit Profile', profile_path, class: 'btn btn-primary' %>
 <div class="mb-3">
   <%= form_tag goods_services_path, method: :get, class: 'form-inline' do %>
     <%= text_field_tag :query, params[:query], placeholder: "Search goods/services...", class: 'form-control mr-2' %>

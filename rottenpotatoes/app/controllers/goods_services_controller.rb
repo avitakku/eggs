@@ -1,5 +1,4 @@
 class GoodsServicesController < ApplicationController
-    before_action :set_goods_service, only: [:show, :edit, :update, :destroy]
   
     def show
     end
@@ -19,17 +18,16 @@ class GoodsServicesController < ApplicationController
     end
   
     def new
-      @goods_service = GoodsAndService.new
     end
   
     def create
-      @goods_service = GoodsAndService.new(goods_service_params)
-      if @goods_service.save
-        flash[:notice] = "Goods/Service was successfully created."
-        redirect_to @goods_service
-      else
-        render :new
-      end
+      name = params[:name]
+      category = params[:category]
+      description = params[:description]
+      print name
+      print category
+      print description
+      redirect_to profile_path
     end
   
     def edit
@@ -49,7 +47,12 @@ class GoodsServicesController < ApplicationController
       flash[:notice] = "Goods/Service was deleted."
       redirect_to goods_services_path
     end
-  
+
+    def profile
+        @user = UserInformation.where(user_id: "94213")
+        @goods_services = GoodsAndService.where(user_id: "94213")
+    end
+
     private
   
     def set_goods_service
