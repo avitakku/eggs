@@ -21,12 +21,14 @@ class GoodsServicesController < ApplicationController
     end
   
     def create
-      name = params[:name]
-      category = params[:category]
-      description = params[:description]
-      print name
-      print category
-      print description
+      goods = params[:goods_service]
+      name = goods[:name]
+      category = goods[:category]
+      description = goods[:description]
+      puts name
+      puts category
+      puts description 
+      @good_service = GoodsAndService.create!(user_id: "94213", name: name, category: category, description: description, created_at: Time.new, updated_at: Time.new)
       redirect_to profile_path
     end
   
@@ -51,6 +53,10 @@ class GoodsServicesController < ApplicationController
     def profile
         @user = UserInformation.where(user_id: "94213")
         @goods_services = GoodsAndService.where(user_id: "94213")
+
+        #@some = GoodsAndService.where(category: 1)
+        #@some.destroy
+
     end
 
     private

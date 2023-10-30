@@ -3,12 +3,12 @@
 <%= form_tag("/goods_services", method: "post") do %>
   <%= label :goods_service, :name, 'Name', class: 'col-form-label' %>
   <%= text_field :goods_service, :name, class: 'form-control' %>
-  <%= label :goods_service, :category, 'Category', class: 'col-form-label' %>
-  <%= text_field :goods_service, :category, class: 'form-control' %>
   <%= label :goods_service, :description, 'Description', class: 'col-form-label' %>
   <%= text_field :goods_service, :description, class: 'form-control' %>
+  <%= label :goods_service, :category, 'Category', class: 'col-form-label' %>
+  <%= select :goods_service, :category, {"Good":0,"Service":1}, class: 'form-control' %>
   <br/>
-  <%= submit_tag 'Save Changes', class: 'btn btn-primary' %>
+  <%= submit_tag 'Post', class: 'btn btn-primary' %>
 <% end %>
 
 
