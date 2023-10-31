@@ -19,7 +19,7 @@
     <% if @goods_services.any? %>
     <% @goods_services.each do |goods_service| %>
         <tr>
-            <td><%= goods_service.name %></td>
+            <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
             <td><%= goods_service.user&.name || "Unknown User" %></td>
             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
         </tr>
