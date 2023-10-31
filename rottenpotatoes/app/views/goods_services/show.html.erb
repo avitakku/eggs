@@ -1,16 +1,19 @@
 <!--  app/views/movies/show.html.erb -->
-<h2>Contact the owner of <em><%= @good_service.name %></em></h2>
+<h2>Details of <em><%= @good_service.name %></em> offered by <em><%= @good_service.user.name %></em></h2>
+
+<ul id ="Item Details">
+  <b>Item Description:</b>
+  <br/>
+  <%= @good_service.description %>
+</ul>
 
 <ul id="Contact the Owner">
-  <li>
-    Name:
+    <b>Owner Name:</b>
     <%= @good_service.user.name %>
     <!-- <%= link_to "#{@good_service.user.name}", profile_path(@good_service.user.user_id)%> -->
-  </li>
-  <li>
-    Email:
+    <br/>
+    <b>Owner Email:</b>
     <%= @good_service.user.contact_information %>
-  </li>
 </ul>
 
 <%= link_to 'Go Back', goods_services_path, class: 'btn btn-primary' %>
