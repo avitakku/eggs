@@ -7,12 +7,12 @@ Feature: display list of goods and services
 Background: goods and servics in database
 
   Given the following items exist:
-  | name          | category
-  | Bike          | Good
-  | Tutoring      | Service
-  | Textbooks     | Good
-  | Laptop Repair | Service
-  | Mini Fridge   | Good
+  | name          | category |
+  | Bike          | Good     |
+  | Tutoring      | Service  |
+  | Textbooks     | Good     |
+  | Laptop Repair | Service  |
+  | Mini Fridge   | Good     |
 
 Given I am on the Eggs home page
 
