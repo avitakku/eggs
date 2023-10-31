@@ -1,10 +1,11 @@
 <!--  app/views/movies/show.html.erb -->
-<h2>Details about <em><%= @good_service.name %></em> offered by <em><%= @good_service.user.name %></em></h2>
+<h2>Contact the owner of <em><%= @good_service.name %></em></h2>
 
 <ul id="Contact the Owner">
   <li>
     Name:
-    <%= link_to "#{@good_service.user.name}", profile_path(@good_service.user)%>
+    <%= @good_service.user.name %>
+    <!-- <%= link_to "#{@good_service.user.name}", profile_path(@good_service.user.user_id)%> -->
   </li>
   <li>
     Email:
