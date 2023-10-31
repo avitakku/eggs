@@ -103,3 +103,9 @@ h2 {
   letter-spacing: -1px;
   margin: 0;
 }
+
+.taller-text-field {
+  height: 100px; /* Adjust the height as needed */
+
+}
+
