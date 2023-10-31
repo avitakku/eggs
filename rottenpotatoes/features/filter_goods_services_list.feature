@@ -29,7 +29,8 @@ Scenario: search items by keyword
   Then I should see the following items: Bike
   And I should not see the following items: Tutoring, Laptop Repair
 
-Scenario: learn more about each item 
-  Given I click on "Textbooks" //figure out this
-  Then I am on item page //fix this syntax
-  And I should see owner name //write this step 
+Scenario: Learn more about "Textbooks" item
+  When I click on the goods/service "Textbooks"
+  Then I confirm that I am on the "Textbooks" item page
+  And I should see the name "Avantika Garg"
+  And I should see the email "ag4049@columbia.edu"

@@ -43,15 +43,23 @@ When /I click the search button/ do
   click_button("Search")
 end
 
-Then /I should see all the movies/ do
-  # Make sure that all the movies in the app are visible in the table
-  Movie.all.each do |movie|
-    step %{I should see "#{movie.title}"}
+
+When /^I click on the goods/service "(.*?)"$/ do |goods_service_name|
+    click_link(goods_service_name)
   end
+
+Then /^I confirm that I am on the "(.*?)" items page$/ do |goods_service_name|
+    expect(page).to eq(goods_service_path(goods_service))
+  end
+
+And('I should see the name {string}') do |name|
+    expect(page).to have_content(name)
 end
 
-Then(/^the director of "([^"]*)" should be "([^"]*)"$/) do |movie_title, director_name|
-  movie = Movie.find_by_title(movie_title)
-  expect(movie.director).to eq director_name
+And('I should see the email {string}') do |email|
+    expect(page).to have_content(email)
 end
 
+When /^I fill in 'Search-bar' with "(.*?)"$/ do |keyword|
+    fill_in('Search-bar', with: keyword)
+  end
