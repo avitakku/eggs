@@ -2,7 +2,6 @@
 Given /the following items exist/ do |goods_and_services_table|
   goods_and_services_table.hashes.each do |item|
     cat = -1
-    puts item
     if item[:category].eql?("Good")
       cat = 0
     else
@@ -36,8 +35,12 @@ Then /I should (not )?see the following items: (.*)$/ do |bool, items_list|
   end
 end
 
-When /I submit the search form/ do
+When /I click the refresh button/ do
   click_button("Refresh")
+end
+
+When /I click the search button/ do
+  click_button("Search")
 end
 
 Then /I should see all the movies/ do

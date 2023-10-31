@@ -19,20 +19,17 @@ Given I am on the Eggs home page
 Scenario: filter items by category
   Given I check the following categories: Good
   And I uncheck the following categories: Service
-  And I submit the search form
+  And I click the refresh button
   Then I should see the following items: Bike, Textbooks, Mini Fridge
   And I should not see the following items: Tutoring, Laptop Repair
 
-Scenario: find movie with same director
-  Given I am on the details page for "Star Wars"
-  When  I follow "Find Movies With Same Director"
-  Then  I should be on the Similar Movies page for "Star Wars"
-  And   I should see "THX-1138"
-  But   I should not see "Blade Runner"
+Scenario: search items by keyword
+  When I fill in 'Search-bar' with "Bike"
+  And I click the search button
+  Then I should see the following items: Bike
+  And I should not see the following items: Tutoring, Laptop Repair
 
-Scenario: can't find similar movies if we don't know director (sad path)
-  Given I am on the details page for "Alien"
-  Then  I should not see "Ridley Scott"
-  When  I follow "Find Movies With Same Director"
-  Then  I should be on the home page
-  And   I should see "'Alien' has no director info"
+Scenario: learn more about each item 
+  Given I click on "Textbooks" //figure out this
+  Then I am on item page //fix this syntax
+  And I should see owner name //write this step 
