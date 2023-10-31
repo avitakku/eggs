@@ -1,6 +1,8 @@
 class GoodsServicesController < ApplicationController
   
     def show
+      id = params[:id]
+      @good_service = GoodsAndService.find(id)
     end
   
     def index
