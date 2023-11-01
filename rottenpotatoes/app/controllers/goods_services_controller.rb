@@ -36,6 +36,9 @@ class GoodsServicesController < ApplicationController
   
     def edit
     end
+
+    def put
+    end
   
     def update
       if @goods_service.update(goods_service_params)
@@ -63,6 +66,7 @@ class GoodsServicesController < ApplicationController
 
     private
   
+=begin
     def set_goods_service
       @goods_service = GoodsAndService.find(params[:id])
     end
@@ -70,6 +74,7 @@ class GoodsServicesController < ApplicationController
     def goods_service_params
       params.require(:goods_service).permit(:name, :category, :description)
     end
+=end
   
     def category_ids_from_names(names)
       names.map { |name| name == "Good" ? 0 : 1 }
