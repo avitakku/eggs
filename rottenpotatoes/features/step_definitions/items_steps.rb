@@ -43,23 +43,52 @@ When /I click the search button/ do
   click_button("Search")
 end
 
-
-When /^I click on the goods/service "(.*?)"$/ do |goods_service_name|
-    click_link(goods_service_name)
-  end
-
-Then /^I confirm that I am on the "(.*?)" items page$/ do |goods_service_name|
-    expect(page).to eq(goods_service_path(goods_service))
-  end
-
-And('I should see the name {string}') do |name|
-    expect(page).to have_content(name)
+When(/^I click on the goods\/service "([^"]*)"$/) do |item_name|
+  #puts page.body debugging
+  click_link(item_name)
 end
 
-And('I should see the email {string}') do |email|
-    expect(page).to have_content(email)
+Then /^I confirm that I am on the "(.*?)" item page$/ do |goods_service_name|
+  item = GoodsAndService.find_by(name: goods_service_name)
+  expect(item).not_to be_nil
+
+  expect(current_path).to eq(goods_service_path(item))
+end
+
+Then /I should see the name "(.*)"/ do |name|
+  #puts page.body
+  expect(page).to have_content(name)
+end
+
+Then /I should see the email "(.*)"/ do |email|
+  expect(page).to have_content(email)
 end
 
 When /^I fill in 'Search-bar' with "(.*?)"$/ do |keyword|
     fill_in('Search-bar', with: keyword)
   end
+
+When /I click on the Edit Profile link/ do
+    click_link("Edit Profile")
+end
+
+Then /^I confirm that I am on the "(.*?)" profile page$/ do |name|
+  puts page.body
+  expect(current_path).to eq(profile_path)
+end
+
+Then /I should see the username "([^"]*)"/ do |username|
+  expect(page).to have_content(username)
+end
+
+Then /I should see the address "([^"]*)"/ do |address|
+  expect(page).to have_content(address)
+end
+
+Then /I should see the contact "([^"]*)"/ do |contact|
+  expect(page).to have_content(contact)
+end
+
+Then /I should see a rating of "([^"]*)"/ do |rating|
+  expect(page).to have_content(rating)
+end
