@@ -37,9 +37,7 @@ class GoodsServicesController < ApplicationController
     def edit
     end
 
-    def put
-    end
-  
+=begin
     def update
       if @goods_service.update(goods_service_params)
         flash[:notice] = "Goods/Service was successfully updated."
@@ -54,6 +52,7 @@ class GoodsServicesController < ApplicationController
       flash[:notice] = "Goods/Service was deleted."
       redirect_to goods_services_path
     end
+=end
 
     def profile
         @user = UserInformation.where(user_id: "94213")

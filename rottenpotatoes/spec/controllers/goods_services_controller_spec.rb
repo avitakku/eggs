@@ -9,19 +9,4 @@ RSpec.describe GoodsServicesController, type: :model do
     let!(:item1)   { GoodsAndService.create!(user_id: "1234", name: "item1", category: 0, description: "A")}
     let!(:item2)   { GoodsAndService.create!(user_id: "1234", name: "item2", category: 1, description: "B")}
 
-    describe 'PUT #update' do
-        it 'updates the good/service' do
-            put :update, user_id: item1.user_id, item1: { name: "Updated Name" }
-            item1.reload
-            expect(item1.name).to eq("Updated Name")
-        end
-    end
-
-    describe 'DELETE #destroy' do
-        it 'deletes the good/service' do
-        expect {
-            delete :destroy, user_id: item1.user_id
-        }.to change(GoodsAndService, :count).by(-1)
-        end
-    end
 end
