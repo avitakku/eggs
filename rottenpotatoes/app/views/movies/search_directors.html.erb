@@ -1,9 +1,0 @@
-<h2>Movies by <%= @movie.director %></h2>
-
-<ul>
-  <% @movies.each do |movie| %>
-    <li><%= movie.title %></li>
-  <% end %>
-</ul>
-
-<%= link_to 'Back to movie list', movies_path %>

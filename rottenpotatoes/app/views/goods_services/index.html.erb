@@ -1,0 +1,50 @@
+<h2>All Goods/Services</h2>
+
+<!-- Search Bar for Goods/Services -->
+<div class="mb-3">
+  <%= form_tag goods_services_path, method: :get, class: 'form-inline' do %>
+    <%= text_field_tag :query, params[:query], placeholder: "Search goods/services...", id: 'Search-bar', class: 'form-control mr-2' %>
+    <%= submit_tag 'Search', class: 'btn btn-secondary mr-2' %>
+    <%= link_to 'Add Friends', "#", class: 'btn btn-primary' %> <!-- Replace "#" with the appropriate path for adding friends. -->
+    <%= link_to 'Edit Profile', profile_path, class: 'btn btn-primary' %>
+  <% end %>
+</div>
+
+<!-- Filter Form for Categories -->
+<%= form_tag goods_services_path, method: :get, id: 'filters_form' do %>
+  <%= hidden_field_tag :home, 1 %>
+  Include:
+  <% @all_categories.each do |category| %>
+    <div class="form-check form-check-inline">
+      <%= label_tag "categories[#{category}]", category, class: 'form-check-label' %>
+      <%= check_box_tag "categories[#{category}]", "1", @categories_to_show.include?(category), class: 'form-check-input' %>
+    </div>
+  <% end %>
+  <%= submit_tag 'Refresh', id: 'filters_submit', class: 'btn btn-primary' %>
+<% end %>
+
+<table class="table table-striped col-md-12" id="goods_services">
+  <thead>
+    <tr>
+      <th>Good/Service</th>
+      <th>Name</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @goods_services.any? %>
+    <% @goods_services.each do |goods_service| %>
+        <tr>
+            <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
+            <td><%= goods_service.user&.name || "Unknown User" %></td>
+            <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+        </tr>
+    <% end %>
+    <% else %>
+        <tr>
+            <td colspan="3">No goods or services found.</td>
+        </tr>
+    <% end %>
+
+  </tbody>
+</table>

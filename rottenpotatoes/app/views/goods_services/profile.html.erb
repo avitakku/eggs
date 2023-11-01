@@ -1,0 +1,37 @@
+<h1>Profile Page</h1>
+<% @user.each do |user| %>
+    <p>Name: <%= user.name %></p>
+    <p>Username: <%= user.username %></p>
+    <p>Address: <%= user.address %></p>
+    <p>Contact: <%= user.contact_information %></p>
+    <p>Rating: <%= user.rating %></p>
+<% end %>
+
+<table class="table table-striped col-md-12" id="goods_services">
+  <thead>
+    <tr>
+      <th>Good/Service</th>
+      <th>Name</th>
+      <th>Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @goods_services.any? %>
+    <% @goods_services.each do |goods_service| %>
+        <tr>
+            <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
+            <td><%= goods_service.user&.name || "Unknown User" %></td>
+            <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+        </tr>
+    <% end %>
+    <% else %>
+        <tr>
+            <td colspan="3">No goods or services found.</td>
+        </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<%= link_to 'Offer a new good/service', new_goods_service_path, class: 'btn btn-primary' %>
+<%= link_to 'Back to Home', goods_services_path, class: 'btn btn-primary' %>

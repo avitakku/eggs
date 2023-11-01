@@ -1,9 +1,12 @@
 Rottenpotatoes::Application.routes.draw do
-  resources :movies do
-    member do
-      get 'search_directors'
+    resources :goods_services do
+      member do
+        get 'search_connections'
+      end
     end
-  end
 
-  root :to => redirect('/movies')
-end
+    get "profile", to: "goods_services#profile"
+  
+    root :to => redirect('/goods_services')
+  end
+  
