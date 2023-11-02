@@ -11,8 +11,10 @@ Aryan Ray - ar4179 <br>
    Start the rails server: rails server -b 0.0.0.0 <br>
    Click Box URL <br>
 ### 2. Running on Heroku:
-### 3. Running Cucumber Tests:
+   https://i-love-eggs-d229c21e8c11.herokuapp.com/goods_services
+### 3. Running Cucumber + RSpec Tests:
     bundle exec rake db:drop db:create db:migrate db:seed
     rake db:migrate RAILS_ENV=test
     rake db:seed RAILS_ENV=test
     run rake cucumber
+    run rake spec
