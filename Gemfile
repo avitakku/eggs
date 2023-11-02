@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.6.6'
 gem 'rails', '4.2.10'
+gem 'pg'
 
 # for Heroku deployment 
 group :development, :test do
@@ -21,7 +22,6 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '~> 0.21' # for Heroku deployment
   gem 'rails_12factor'
 end
 
