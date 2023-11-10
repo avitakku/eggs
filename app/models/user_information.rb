@@ -10,6 +10,9 @@ class UserInformation < ActiveRecord::Base
       
         # Check if all elements in the friends array are valid user IDs
         invalid_user_ids = friends.reject { |friend| UserInformation.exists?(user_id: friend) }
+        if invalid_user_ids.any?
+          errors.add(:friends, "contains invalid user IDs: #{invalid_user_ids.join(', ')}")
+        end
     end
   
   end
