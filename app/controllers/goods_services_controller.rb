@@ -21,6 +21,18 @@ class GoodsServicesController < ApplicationController
   
     def new
     end
+
+    def friend
+        id = params[:user_id]
+    end
+
+    def users
+        @all_users = if params[:query].present?
+            UserInformation.where("name LIKE ?", "%#{params[:query]}%")
+        else
+            UserInformation.all
+        end
+    end
   
     def create
       goods = params[:goods_service]
@@ -37,7 +49,6 @@ class GoodsServicesController < ApplicationController
     def edit
     end
 
-=begin
     def update
       if @goods_service.update(goods_service_params)
         flash[:notice] = "Goods/Service was successfully updated."
@@ -52,7 +63,6 @@ class GoodsServicesController < ApplicationController
       flash[:notice] = "Goods/Service was deleted."
       redirect_to goods_services_path
     end
-=end
 
     def profile
         @user = UserInformation.where(user_id: "94213")

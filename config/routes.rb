@@ -6,6 +6,8 @@ Eggs::Application.routes.draw do
     end
 
     get "profile", to: "goods_services#profile"
+    get "users", to: "goods_services#users"
+    get "friend", to: "goods_services#friend"
   
     root :to => redirect('/goods_services')
   end
