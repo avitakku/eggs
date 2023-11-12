@@ -1,8 +1,25 @@
 class ProfileController < ApplicationController
 
+    @@logged_in_user = "15842"
+
     def index
-        @user = UserInformation.where(user_id: "94213")
-        @goods_services = GoodsAndService.where(user_id: "94213")
+        users = UserInformation.where(user_id: @@logged_in_user)
+        @user = nil
+        users.each do |user|
+            @user = user
+        end
+        @goods_services = GoodsAndService.where(user_id: @@logged_in_user)
+        
+        @friends = []
+        @user.friends.each do |friend_id|
+            upperFriend = UserInformation.where(user_id: friend_id)
+            friend = nil
+            upperFriend.each do |friend|
+                @friends.push(friend)
+            end
+            #@friends = x.friends
+        end
+
     end
 
     def users
@@ -19,6 +36,11 @@ class ProfileController < ApplicationController
     end
 
     def create
+        keys = params[:profile]
+        friend_id = keys[:friend_key]
+        
+
+        redirect_to controller: :profile, action: :index
     end
 
 end

@@ -1,4 +1,6 @@
 class GoodsServicesController < ApplicationController
+
+    @@logged_in_user = "15842"
   
     def show
       id = params[:id]
@@ -30,7 +32,7 @@ class GoodsServicesController < ApplicationController
       puts name
       puts category
       puts description 
-      @good_service = GoodsAndService.create!(user_id: "94213", name: name, category: category, description: description, created_at: Time.new, updated_at: Time.new)
+      @good_service = GoodsAndService.create!(user_id: @@logged_in_user, name: name, category: category, description: description, created_at: Time.new, updated_at: Time.new)
       redirect_to controller: :profile, action: :index
     end
   
