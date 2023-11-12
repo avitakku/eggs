@@ -5,9 +5,13 @@ Eggs::Application.routes.draw do
       end
     end
 
-    get "profile", to: "goods_services#profile"
-    get "users", to: "goods_services#users"
-    get "friend", to: "goods_services#friend"
+    resources :profile do
+        member do
+          get 'search_connections'
+        end
+    end
+
+    get "users", to: "profile#users"
   
     root :to => redirect('/goods_services')
   end

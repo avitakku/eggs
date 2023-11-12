@@ -1,0 +1,11 @@
+<% @user.each do |user| %>
+  <h2>Add <%= user.name %> as a New Friend</h2>
+<% end %>
+
+<%= form_tag("/profile", method: "post") do %>
+  <%= label :profile, :friend_key, 'Friend Key', class: 'col-form-label' %>
+  <%= text_field :profile, :friend_key, class: 'form-control' %>
+  <br/>
+  <%= submit_tag 'Add', class: 'btn btn-primary' %>
+  <%= link_to 'Cancel', '/users', class: 'btn btn-primary' %>
+<% end %>

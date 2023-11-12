@@ -4,6 +4,9 @@ class GoodsServicesController < ApplicationController
       id = params[:id]
       @good_service = GoodsAndService.find(id)
     end
+
+    def new
+    end
   
     def index
       @all_categories = [ "Good", "Service" ]
@@ -19,21 +22,6 @@ class GoodsServicesController < ApplicationController
       @goods_services = @goods_services.where(category: category_ids_from_names(@categories_to_show))
     end
   
-    def new
-    end
-
-    def friend
-        id = params[:user_id]
-    end
-
-    def users
-        @all_users = if params[:query].present?
-            UserInformation.where("name LIKE ?", "%#{params[:query]}%")
-        else
-            UserInformation.all
-        end
-    end
-  
     def create
       goods = params[:goods_service]
       name = goods[:name]
@@ -43,7 +31,7 @@ class GoodsServicesController < ApplicationController
       puts category
       puts description 
       @good_service = GoodsAndService.create!(user_id: "94213", name: name, category: category, description: description, created_at: Time.new, updated_at: Time.new)
-      redirect_to profile_path
+      redirect_to controller: :profile, action: :index
     end
   
     def edit
@@ -62,15 +50,6 @@ class GoodsServicesController < ApplicationController
       @goods_service.destroy
       flash[:notice] = "Goods/Service was deleted."
       redirect_to goods_services_path
-    end
-
-    def profile
-        @user = UserInformation.where(user_id: "94213")
-        @goods_services = GoodsAndService.where(user_id: "94213")
-
-        #@some = GoodsAndService.where(category: 1)
-        #@some.destroy
-
     end
 
     private
