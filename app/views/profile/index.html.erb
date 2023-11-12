@@ -1,7 +1,12 @@
+<head>
+<%= javascript_include_tag 'application' %>
+</head>
+
 <h1>Profile Page</h1>
 
 <p>Name: <%= @user.name %></p>
 <p>Username: <%= @user.username %></p>
+<p>Friend Key: <%= @user.user_id %></p>
 <p>Address: <%= @user.address %></p>
 <p>Contact: <%= @user.contact_information %></p>
 <p>Rating: <%= @user.rating %></p>
@@ -40,6 +45,7 @@
     <tr>
       <th>Name</th>
       <th>Contact Info</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -47,6 +53,7 @@
         <tr>
             <td><%= friend.name %></td>
             <td><%= friend.contact_information %></td>
+            <td><%= link_to "Remove", profile_path(friend.user_id), :method => :delete %></td>
         </tr>
     <% end %>
 

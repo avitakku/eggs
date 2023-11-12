@@ -1,6 +1,6 @@
 class GoodsServicesController < ApplicationController
 
-    @@logged_in_user = "15842"
+    @@logged_in_user = "94213"
   
     def show
       id = params[:id]
