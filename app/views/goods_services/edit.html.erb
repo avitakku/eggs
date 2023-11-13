@@ -1,0 +1,25 @@
+<h2>Edit Good or Service</h2>
+
+<%= form_for @goods_service, url: goods_service_path(@goods_service), method: :patch, html: { class: "form-horizontal" } do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name, 'Name', class: 'col-form-label' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, 'Item Description', class: 'col-form-label' %>
+    <%= f.text_area :description, rows: 4, class: 'form-control taller-text-field' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category, 'Category', class: 'col-form-label' %>
+    <%= f.select :category, {"Good" => 0, "Service" => 1}, {}, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Update', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', '/profile', class: 'btn btn-primary' %>
+  </div>
+
+<% end %>

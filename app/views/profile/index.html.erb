@@ -27,6 +27,8 @@
             <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
             <td><%= goods_service.user&.name || "Unknown User" %></td>
             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+            <td><%= link_to 'Edit', edit_goods_service_path(goods_service), class: 'btn btn-primary' %></td>
+            <td><%= link_to 'Delete', goods_service_path(goods_service), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
         </tr>
     <% end %>
     <% else %>

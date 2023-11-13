@@ -6957,3 +6957,1184 @@ DEPRECATION WARNING: `#timestamps` was called without specifying an option for `
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "Mini Fridge"], ["category", 0], ["description", "Mini fridge, freezer, and microwave set"], ["created_at", "2023-11-02 00:37:17.070487"], ["updated_at", "2023-11-02 00:37:17.070487"]]
   [1m[35m (73.6ms)[0m  commit transaction
+
+
+Started GET "/" for 209.2.224.111 at 2023-11-13 04:33:20 +0000
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 04:33:21 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (5.5ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (6.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (73.4ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 459ms (Views: 384.2ms | ActiveRecord: 27.7ms)
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 209.2.224.111 at 2023-11-13 04:33:22 +0000
+
+
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 209.2.224.111 at 2023-11-13 04:33:22 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 209.2.224.111 at 2023-11-13 04:33:22 +0000
+
+
+Started GET "/assets/application.self-0c36f7873cf2e1405a2d51971cd8b7df6cd5d610714e9399e3dc202f946187b6.css?body=1" for 209.2.224.111 at 2023-11-13 04:33:22 +0000
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:33:25 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (3.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 19.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:34:00 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 04:34:01 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (29.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 04:34:04 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 04:34:05 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 04:34:12 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/goods_services" for 209.2.224.111 at 2023-11-13 04:34:20 +0000
+Processing by GoodsServicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NHs2doZQdPrHsYjHaDmCp1YQuBSLYgm0xg3ursSLeO1NggYTOhWLx7fV6Nty0vNMA99TkE5//D0l38PO2r10nw==", "goods_service"=>{"name"=>"3 eggs", "description"=>"3 brown eggs", "category"=>"0"}, "commit"=>"Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "3 eggs"], ["category", 0], ["description", "3 brown eggs"], ["created_at", "2023-11-13 04:34:20.666975"], ["updated_at", "2023-11-13 04:34:20.666978"]]
+  [1m[35m (95.3ms)[0m  commit transaction
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 111ms (ActiveRecord: 98.4ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:34:20 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (13.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:35:58 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 04:36:01 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (4.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 04:36:02 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:36:05 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (9.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:36:30 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/delete" for 209.2.224.111 at 2023-11-13 04:36:32 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find GoodsAndService with 'id'=delete):
+  app/controllers/goods_services_controller.rb:7:in `show'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.2ms)
+
+
+Started GET "/" for 209.2.224.111 at 2023-11-13 04:44:18 +0000
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 04:44:18 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (63.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 79.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:44:20 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/goods_services/edit" for 209.2.224.111 at 2023-11-13 04:44:23 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"edit"}
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find GoodsAndService with 'id'=edit):
+  app/controllers/goods_services_controller.rb:62:in `set_goods_service'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.0ms)
+
+
+Started GET "/goods_services/" for 209.2.224.111 at 2023-11-13 04:48:13 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/goods_services/profile" for 209.2.224.111 at 2023-11-13 04:48:15 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"profile"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find GoodsAndService with 'id'=profile):
+  app/controllers/goods_services_controller.rb:62:in `set_goods_service'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+
+
+Started GET "/goods_services/profile" for 209.2.224.111 at 2023-11-13 04:48:17 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"profile"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find GoodsAndService with 'id'=profile):
+  app/controllers/goods_services_controller.rb:62:in `set_goods_service'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.4ms)
+
+
+Started GET "/goods_services/profile" for 209.2.224.111 at 2023-11-13 04:48:25 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"profile"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find GoodsAndService with 'id'=profile):
+  app/controllers/goods_services_controller.rb:62:in `set_goods_service'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.9ms)
+
+
+Started GET "/goods_services/profile" for 209.2.224.111 at 2023-11-13 04:49:02 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"profile"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `set_goods_service' for #<GoodsServicesController:0x00007f1fe17c34b0>):
+  activesupport (4.2.10) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:145:in `block in halting_and_conditional'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.1ms)
+
+
+Started GET "/goods_services/profile" for 209.2.224.111 at 2023-11-13 04:49:08 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"profile"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `set_goods_service' for #<GoodsServicesController:0x00007f1fcc6ca910>):
+  activesupport (4.2.10) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:145:in `block in halting_and_conditional'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.13) lib/rack/etag.rb:24:in `call'
+  rack (1.6.13) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.13) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:252:in `context'
+  rack (1.6.13) lib/rack/session/abstract/id.rb:247:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.13) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.13) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.13) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.13) lib/rack/lock.rb:17:in `call'
+  rack (1.6.13) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.13) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.6.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.6.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.9ms)
+
+
+Started GET "/" for 209.2.224.111 at 2023-11-13 04:51:36 +0000
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 04:51:36 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.3ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (31.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 72.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:51:38 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.3ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (44.4ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined local variable or method `goods_service' for #<#<Class:0x00007f1fe0c98ab8>:0x00007f1fe0cac388>):
+    38: </table>
+    39: 
+    40: <%= link_to 'Offer a new good/service', 'goods_services/new', class: 'btn btn-primary' %>
+    41: <td><%= link_to 'Edit', edit_goods_service_path(goods_service), class: 'btn btn-primary' %></td>
+    42: <%= link_to 'Delete a good/service', 'goods_services/delete', class: 'btn btn-primary' %>
+    43: 
+    44: <table class="table table-striped col-md-12" id="all_users">
+  app/views/profile/index.html.erb:41:in `_app_views_profile_index_html_erb__2925162307214504572_69887446076460'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/" for 209.2.224.111 at 2023-11-13 04:52:19 +0000
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 04:52:20 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:52:21 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (19.7ms)
+  Rendered layouts/_flash.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 29.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/5/edit" for 209.2.224.111 at 2023-11-13 04:52:25 +0000
+Processing by GoodsServicesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered goods_services/edit.html.erb within layouts/application (20.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/goods_services/5/edit" for 209.2.224.111 at 2023-11-13 04:52:33 +0000
+Processing by GoodsServicesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mGoodsAndService Load (0.5ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered goods_services/edit.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/goods_services/5" for 209.2.224.111 at 2023-11-13 04:52:44 +0000
+Processing by GoodsServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fbP2j/F8xYdH1uSULyxu0GlmPStcCybQiS2qC8/g3y0ESsbqTTk6ujeyhIg1xx87PKnWr5kW01lq/4dr0dbTXw==", "goods_and_service"=>{"name"=>"Fridge"}, "commit"=>"Update", "id"=>"5"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "5"]]
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.1ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: goods_service):
+  app/controllers/goods_services_controller.rb:70:in `goods_service_params'
+  app/controllers/goods_services_controller.rb:49:in `update'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.1ms)
+
+
+Started GET "/goods_services/delete" for 209.2.224.111 at 2023-11-13 04:56:39 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"delete"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find GoodsAndService with 'id'=delete):
+  app/controllers/goods_services_controller.rb:66:in `set_goods_service'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.5ms)
+
+
+Started GET "/goods_services/5/edit" for 209.2.224.111 at 2023-11-13 04:56:46 +0000
+Processing by GoodsServicesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered goods_services/edit.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 209.2.224.111 at 2023-11-13 04:57:36 +0000
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 04:57:36 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 04:57:38 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/6/edit" for 209.2.224.111 at 2023-11-13 04:57:40 +0000
+Processing by GoodsServicesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered goods_services/edit.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/goods_services/6" for 209.2.224.111 at 2023-11-13 04:57:49 +0000
+Processing by GoodsServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7vLseqYYUOEjHuUG9JkzlM+3jw2NjiggtbnO3CcfZe6XC9wfGl2v3FN6hRruckJ/mnhkiUiT3alWa+O8OSlpnA==", "goods_and_service"=>{"name"=>"2 eggs", "description"=>"2 white eggs", "category"=>"0"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: goods_service):
+  app/controllers/goods_services_controller.rb:70:in `goods_service_params'
+  app/controllers/goods_services_controller.rb:49:in `update'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.3ms)
+
+
+Started PATCH "/goods_services/6" for 209.2.224.111 at 2023-11-13 04:57:57 +0000
+Processing by GoodsServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7vLseqYYUOEjHuUG9JkzlM+3jw2NjiggtbnO3CcfZe6XC9wfGl2v3FN6hRruckJ/mnhkiUiT3alWa+O8OSlpnA==", "goods_and_service"=>{"name"=>"2 eggs", "description"=>"2 white eggs", "category"=>"0"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.1ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: goods_service):
+  app/controllers/goods_services_controller.rb:70:in `goods_service_params'
+  app/controllers/goods_services_controller.rb:49:in `update'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (39.1ms)
+
+
+Started PATCH "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:00:13 +0000
+Processing by GoodsServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7vLseqYYUOEjHuUG9JkzlM+3jw2NjiggtbnO3CcfZe6XC9wfGl2v3FN6hRruckJ/mnhkiUiT3alWa+O8OSlpnA==", "goods_and_service"=>{"name"=>"2 eggs", "description"=>"2 white eggs", "category"=>"0"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "goods_and_services" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "goods_and_services"."id" = ?  [["name", "2 eggs"], ["description", "2 white eggs"], ["updated_at", "2023-11-13 05:00:13.245986"], ["id", 6]]
+  [1m[36m (73.8ms)[0m  [1mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 75.2ms)
+
+NoMethodError (undefined method `goods_and_service_url' for #<GoodsServicesController:0x00007f1fe0d790b8>):
+  app/controllers/goods_services_controller.rb:51:in `update'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.3ms)
+
+
+Started PATCH "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:01:46 +0000
+Processing by GoodsServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7vLseqYYUOEjHuUG9JkzlM+3jw2NjiggtbnO3CcfZe6XC9wfGl2v3FN6hRruckJ/mnhkiUiT3alWa+O8OSlpnA==", "goods_and_service"=>{"name"=>"2 eggs", "description"=>"2 white eggs", "category"=>"0"}, "commit"=>"Update", "id"=>"6"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 12ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:01:47 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (10.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 19.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:01:51 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/show.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:01:57 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 05:01:58 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.3ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:02:02 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:02:07 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 05:02:08 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:02:10 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (1.6ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/goods_services/1" for 209.2.224.111 at 2023-11-13 05:02:14 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  Rendered goods_services/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 05:02:15 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/goods_services/1" for 209.2.224.111 at 2023-11-13 05:02:22 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  Rendered goods_services/show.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 05:02:23 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:02:26 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (15.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:02:28 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/show.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 05:02:29 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:02:35 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (12.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/6/edit" for 209.2.224.111 at 2023-11-13 05:02:41 +0000
+Processing by GoodsServicesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered goods_services/edit.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:02:54 +0000
+Processing by GoodsServicesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UCYNSotHRGMoL9HUOriZW46YFg/Bt3s5Ohs+vk4eC5Ap3z0vNwK7XlhLscggU+iw21f9iwSqjrDZyRPeUCgH4g==", "goods_and_service"=>{"name"=>"5 chickens", "description"=>"yayayay", "category"=>"1"}, "commit"=>"Update", "id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "goods_and_services" SET "name" = ?, "category" = ?, "description" = ?, "updated_at" = ? WHERE "goods_and_services"."id" = ?  [["name", "5 chickens"], ["category", 1], ["description", "yayayay"], ["updated_at", "2023-11-13 05:02:54.452007"], ["id", 6]]
+  [1m[36m (87.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 93ms (ActiveRecord: 88.5ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:02:54 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:02:59 +0000
+Processing by GoodsServicesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/show.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 209.2.224.111 at 2023-11-13 05:06:23 +0000
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 05:06:23 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.3ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (26.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 38.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:06:25 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (27.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/goods_services/6" for 209.2.224.111 at 2023-11-13 05:06:33 +0000
+Processing by GoodsServicesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"63PqJF9clRkrAy+XnrEiShFYqltkW4fPH5XOC9XhLeKSitpB4xlqJFtnT4uEWlOhRJdB36FGckb8R+Nry9chkA==", "id"=>"6"}
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "goods_and_services" WHERE "goods_and_services"."id" = ?  [["id", 6]]
+  [1m[36m (82.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 86ms (ActiveRecord: 82.7ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:06:34 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 05:06:40 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/goods_services" for 209.2.224.111 at 2023-11-13 05:06:46 +0000
+Processing by GoodsServicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hXQqxWiFtbJLVKqjlYC7ceLz6O3Ujphhya/1P61yE/b8jRqg1MBKjzswyr+Pa8qatzwDaRGTbegqfdhfs0QfhA==", "goods_service"=>{"name"=>"3 eggs", "description"=>"3 delicious eggs", "category"=>"0"}, "commit"=>"Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "3 eggs"], ["category", 0], ["description", "3 delicious eggs"], ["created_at", "2023-11-13 05:06:46.880436"], ["updated_at", "2023-11-13 05:06:46.880439"]]
+  [1m[35m (97.3ms)[0m  commit transaction
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 108ms (ActiveRecord: 98.2ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:06:47 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/goods_services/7" for 209.2.224.111 at 2023-11-13 05:07:11 +0000
+Processing by GoodsServicesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"l9xlQxU+Jv+3B2BdHS4SMs4uC9llGGW2EaNKgVnWPn3uJVUmqXvZwsdjAEEHxWPZm+HgXaAFkD/ycWfhR+AyDw==", "id"=>"7"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.8ms)[0m  [1mDELETE FROM "goods_and_services" WHERE "goods_and_services"."id" = ?[0m  [["id", 7]]
+  [1m[35m (75.3ms)[0m  commit transaction
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 112ms (ActiveRecord: 81.0ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:07:11 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (9.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 17.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 209.2.224.111 at 2023-11-13 05:07:41 +0000
+
+
+Started GET "/goods_services" for 209.2.224.111 at 2023-11-13 05:07:42 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:07:44 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 05:07:46 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/goods_services" for 209.2.224.111 at 2023-11-13 05:07:53 +0000
+Processing by GoodsServicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZB1ltTkuud3lkPRjIZ9KAF2/rGwobGPn9/lcKLiAltwaUXzaKFF2gfyI82WbQzDVLkVNXW8RAZ8DcgQvNQOKQ==", "goods_service"=>{"name"=>"3 eggs", "description"=>"3 delicious eggs", "category"=>"0"}, "commit"=>"Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "3 eggs"], ["category", 0], ["description", "3 delicious eggs"], ["created_at", "2023-11-13 05:07:53.412797"], ["updated_at", "2023-11-13 05:07:53.412800"]]
+  [1m[35m (80.5ms)[0m  commit transaction
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 87ms (ActiveRecord: 80.9ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:07:53 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 13.6ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/goods_services/8" for 209.2.224.111 at 2023-11-13 05:07:56 +0000
+Processing by GoodsServicesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2vKX6q9lZATrLq6A6UaBIwiEb/i3nrTNvzt6iJnwWumjC6ePEyCbOZtKzpzzrfDIXUuEfHKDQURc6Vfoh8ZWmw==", "id"=>"8"}
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", 8]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "goods_and_services" WHERE "goods_and_services"."id" = ?[0m  [["id", 8]]
+  [1m[35m (71.1ms)[0m  commit transaction
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 76ms (ActiveRecord: 71.8ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:07:56 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:08:34 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (13.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goods_services/new" for 209.2.224.111 at 2023-11-13 05:08:37 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/goods_services" for 209.2.224.111 at 2023-11-13 05:08:45 +0000
+Processing by GoodsServicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n8kjCQ38mNcOQ5vv7BYSxqyr4kbnevY47YGEl+s+MzrmMBNssbln6n4n+/P2/WMt+WQJwiJnA7EOU6n39Qg/SA==", "goods_service"=>{"name"=>"3 eggs", "description"=>"3 yum eggs", "category"=>"0"}, "commit"=>"Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "94213"], ["name", "3 eggs"], ["category", 0], ["description", "3 yum eggs"], ["created_at", "2023-11-13 05:08:45.862757"], ["updated_at", "2023-11-13 05:08:45.862758"]]
+  [1m[36m (79.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 88ms (ActiveRecord: 80.4ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:08:46 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/goods_services/9" for 209.2.224.111 at 2023-11-13 05:08:53 +0000
+Processing by GoodsServicesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8NrMUzU24X7FxA5b9CnIy6Onz+/C5qoe8PvmPMeMXFeJI/w2iXMeQ7Wgbkfuwrkg9mgkawf7X5cTKctc2bpQJQ==", "id"=>"9"}
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "goods_and_services" WHERE "goods_and_services"."id" = ?  [["id", 9]]
+  [1m[36m (82.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 85ms (ActiveRecord: 82.7ms)
+
+
+Started GET "/profile" for 209.2.224.111 at 2023-11-13 05:08:54 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.4ms)
