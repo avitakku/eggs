@@ -1,0 +1,51 @@
+<h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <%= f.fields_for :user_information do |uif| %>
+    <div class="field">
+      <%= uif.label :name %> *<br />
+      <%= uif.text_field :name, autofocus: true, required: true %>
+    </div>
+    <br>
+    <div class="field">
+      <%= uif.label :username %> *<br />
+      <%= uif.text_field :username, required: true %>
+    </div>
+    <br>
+    <div class="field">
+        <%= f.label :email %> *<br />
+        <%= f.email_field :email, autofocus: true, required: true %>
+    </div>
+    <br>
+    <div class="field">
+      <%= uif.label :address %><br />
+      <%= uif.text_field :address %>
+    </div>
+    <br>
+    <div class="field">
+      <%= uif.label :photo_url %><br />
+      <%= uif.text_field :photo_url %>
+    </div>
+  <% end %>
+    <br>
+  <div class="field">
+    <%= f.label :password %> *<br />
+    <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "off", required: true %>
+  </div>
+    <br>
+  <div class="field">
+    <%= f.label :password_confirmation %> *<br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", required: true %>
+  </div>
+    <br>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

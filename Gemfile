@@ -4,6 +4,8 @@ ruby '2.6.6'
 gem 'rails', '4.2.10'
 gem 'pg'
 
+gem 'devise', '~> 3.5.0'
+
 # for Heroku deployment 
 group :development, :test do
   gem 'sqlite3', '~> 1.3.6'

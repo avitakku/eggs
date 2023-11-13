@@ -109,3 +109,16 @@ h2 {
 
 }
 
+.center-content {
+  text-align: center;
+}
+
+.center-items {
+  display: inline-block;
+  text-align: left; /* Adjust if you want the text left-aligned */
+}
+
+.logo-image {
+  max-width: 100%;
+  margin-top: 10px;
+}

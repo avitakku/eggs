@@ -1,4 +1,5 @@
 class UserInformation < ActiveRecord::Base
+    belongs_to :user
     serialize :friends, Array
 
     validate :validate_friends_array

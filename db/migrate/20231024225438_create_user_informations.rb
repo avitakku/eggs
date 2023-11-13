@@ -1,7 +1,7 @@
 class CreateUserInformations < ActiveRecord::Migration
     def up
       create_table :user_informations do |t|
-        t.string :user_id
+        t.references :user, index: true, foreign_key: true
         t.string :username
         t.string :name
         t.string :contact_information
