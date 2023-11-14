@@ -11,8 +11,40 @@ class GoodsServicesController < ApplicationController
     end
   
     def index
+      
+      @logged_in_user = @@logged_in_user
+
       @all_categories = [ "Good", "Service" ]
       @categories_to_show = params[:categories]&.keys || @all_categories
+
+      @first_degree_connections = []
+      @second_degree_connections = []
+
+      users = UserInformation.where(user_id: @@logged_in_user)
+      @user = nil
+      users.each do |user|
+          @user = user
+      end
+      
+      @user.friends.each do |friend_id|
+          upperFriend = UserInformation.where(user_id: friend_id)
+          friend = nil
+          @first_degree_connections.push(friend_id)
+      end
+
+      @first_degree_connections.each do |first_degree_friend|
+        curr_friend = UserInformation.where(user_id: first_degree_friend)
+        curr_friend.each do |user|
+          user.friends.each do |friend_id|
+            upperFriend = UserInformation.where(user_id: friend_id)
+            friend = nil
+            if @first_degree_connections.include?(friend_id)
+            else
+              @second_degree_connections.push(friend_id)
+            end
+          end
+        end  
+      end
       
       @goods_services = if params[:query].present?
         GoodsAndService.where("name LIKE ?", "%#{params[:query]}%")
