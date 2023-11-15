@@ -4,7 +4,7 @@ Feature: display list of goods and services
   So that I can find goods and services that are relevant to me
   I want search goods and services by keyword and/or by category
 
-  Background: goods and servics in database
+  Background: goods and services in database
 
   Given the following items exist:
   | name          | category |
@@ -12,7 +12,6 @@ Feature: display list of goods and services
   | Tutoring      | Service  |
   | Textbooks     | Good     |
   | Laptop Repair | Service  |
-  | Mini Fridge   | Good     |
 
   Given I am on the Eggs home page
 

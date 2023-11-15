@@ -20,6 +20,11 @@ Given /the following users exist/ do |profile_table|
   end
 =end
 
+When /^I visit the "(.*?)" profile page$/ do |name|
+  #puts page.body
+  
+end 
+
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
@@ -49,7 +54,9 @@ When /I click the refresh button/ do
 end
 
 When /I click the search button/ do
+  puts "Current URL: #{current_url}"
   click_button("Search")
+  puts "After clicking, URL: #{current_url}"
 end
 
 When(/^I click on the goods\/service "([^"]*)"$/) do |item_name|
@@ -86,6 +93,16 @@ Then /^I confirm that I am on the "(.*?)" profile page$/ do |name|
   expect(current_path).to eq("/profile")
 end
 
+Then /^I confirm that I am on the "(.*?)" friend page$/ do |name|
+  #puts page.body
+  expect(page).to have_content(name)
+end
+
+Then /^I confirm that I am on the "Users" page$/ do
+  #puts page.body
+  expect(current_path).to eq("/users")
+end
+
 Then /I should see the username "(.*)"/ do |username|
   expect(page).to have_content(username)
 end
@@ -109,11 +126,11 @@ And /^the following items should exist:$/ do |table|
   end
 end
 
-And /^the following friends should exist:$/ do |table|
+And /^the following users should exist:$/ do |table|
     table.hashes.each do |user| 
-      GoodsAndService.create!(name: item['name'], category: category) 
+      UserInformation.create(name: user['Name'], contact_information: user['Contact Info'])
     end
-  end
+end
 
 When(/^I click on the Offer a new good\/service link$/) do
   click_link('Offer a new good/service') 
@@ -142,7 +159,7 @@ end
 
 Given(/^I visit the "Profile" page$/) do
     visit "/profile" 
-  end
+end
 
 When(/^I fill in value for "(.*?)" with "(.*?)"$/) do |field, value|
   fill_in(field, with: value)
@@ -160,6 +177,22 @@ end
 
 When("I click the {string} button") do |string|
   click_button(string) 
+end
+
+When(/^I press the "Add Friends" link$/) do
+  visit "/users"
+end
+
+When(/^I press the "Edit" link$/) do 
+  click_link("Edit")
+end
+
+When("I click the {string} link") do |string|
+  click_link(string)
+end
+
+When ("I click on my friend {string}") do |string|
+  click_link(string)
 end
 
 Then(/^I should see the new item "(.*?)" on my profile$/) do |item_name|
