@@ -3,7 +3,6 @@ class ProfileController < ApplicationController
     @@logged_in_user = "94213"
 
     def index
-
         # 'find_by' not working to find user by user_id so using 'where' with a for loop instead
         users = UserInformation.where(user_id: @@logged_in_user)
         @user = nil

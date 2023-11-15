@@ -20,7 +20,7 @@ Feature: display list of goods and services
     Given I check the following categories: Good
     And I uncheck the following categories: Service
     And I click the refresh button
-    Then I should see the following items: Bike, Textbooks, Mini Fridge
+    Then I should see the following items: Bike, Textbooks
     And I should not see the following items: Tutoring, Laptop Repair
 
   Scenario: search items by keyword

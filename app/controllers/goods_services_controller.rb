@@ -100,9 +100,11 @@ class GoodsServicesController < ApplicationController
       @goods_service = GoodsAndService.find(params[:id])
     end
     
+=begin
     def goods_service_params
         params.require(:goods_and_service).permit(:name, :category, :description)
     end
+=end
       
     def category_ids_from_names(names)
       names.map { |name| name == "Good" ? 0 : 1 }

@@ -28,16 +28,26 @@
       <th>Good/Service</th>
       <th>Name</th>
       <th>Category</th>
+      <th>Degree of Connection</th>
     </tr>
   </thead>
   <tbody>
     <% if @goods_services.any? %>
     <% @goods_services.each do |goods_service| %>
+      <% unless goods_service.user&.user_id.eql?(@logged_in_user) %>
         <tr>
             <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
             <td><%= goods_service.user&.name || "Unknown User" %></td>
             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+            <% if @first_degree_connections.include? goods_service.user&.user_id %>
+              <td><%= "1st" %></td>
+            <% elsif @second_degree_connections.include? goods_service.user&.user_id %>
+              <td><%= "2nd" %></td>
+            <% else %>
+              <td><%= "No Connection" %></td>
+            <% end %>
         </tr>
+      <% end %>
     <% end %>
     <% else %>
         <tr>

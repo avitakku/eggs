@@ -25,4 +25,4 @@ Scenario: Adding a New Service
     And the following items should exist:
     | name          | category |
     | Mini Fridge   | Good     |
-    | Tutoring          | Service     |
+    | Tutoring      | Service  |
