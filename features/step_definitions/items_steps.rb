@@ -11,6 +11,20 @@ Given /the following items exist/ do |goods_and_services_table|
   end
 end
 
+=begin
+Given /the following users exist/ do |profile_table|
+    profile_table.hashes.each do |user|
+      
+      UserInformation.create!(user_id: "94213", name: item[:name], category: cat, description: item[:description])
+    end
+  end
+=end
+
+When /^I visit the "(.*?)" profile page$/ do |name|
+  #puts page.body
+  
+end 
+
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
   #  ensure that that e1 occurs before e2.
   #  page.body is the entire content of the page as a string.
@@ -40,7 +54,9 @@ When /I click the refresh button/ do
 end
 
 When /I click the search button/ do
+  puts "Current URL: #{current_url}"
   click_button("Search")
+  puts "After clicking, URL: #{current_url}"
 end
 
 When(/^I click on the goods\/service "([^"]*)"$/) do |item_name|
@@ -74,7 +90,17 @@ end
 
 Then /^I confirm that I am on the "(.*?)" profile page$/ do |name|
   #puts page.body
-  expect(current_path).to eq(profile_path)
+  expect(current_path).to eq("/profile")
+end
+
+Then /^I confirm that I am on the "(.*?)" friend page$/ do |name|
+  #puts page.body
+  expect(page).to have_content(name)
+end
+
+Then /^I confirm that I am on the "Users" page$/ do
+  #puts page.body
+  expect(current_path).to eq("/users")
 end
 
 Then /I should see the username "(.*)"/ do |username|
@@ -98,6 +124,12 @@ And /^the following items should exist:$/ do |table|
     category = (item['category'] == 'Good' ? 0 : 1) 
     GoodsAndService.create!(name: item['name'], category: category) 
   end
+end
+
+And /^the following users should exist:$/ do |table|
+    table.hashes.each do |user| 
+      UserInformation.create(name: user['Name'], contact_information: user['Contact Info'])
+    end
 end
 
 When(/^I click on the Offer a new good\/service link$/) do
@@ -125,6 +157,10 @@ Given(/^I visit the "Offer a New Good or Service" page$/) do
   visit new_goods_service_path 
 end
 
+Given(/^I visit the "Profile" page$/) do
+    visit "/profile" 
+end
+
 When(/^I fill in value for "(.*?)" with "(.*?)"$/) do |field, value|
   fill_in(field, with: value)
 end
@@ -133,8 +169,30 @@ When(/^I select category "(.*?)" from "(.*?)"$/) do |category, field|
   select(category, from: field)
 end
 
+=begin
 When(/^I click the "Post" button$/) do
   click_button('Post') 
+end
+=end
+
+When("I click the {string} button") do |string|
+  click_button(string) 
+end
+
+When(/^I press the "Add Friends" link$/) do
+  visit "/users"
+end
+
+When(/^I press the "Edit" link$/) do 
+  click_link("Edit")
+end
+
+When("I click the {string} link") do |string|
+  click_link(string)
+end
+
+When ("I click on my friend {string}") do |string|
+  click_link(string)
 end
 
 Then(/^I should see the new item "(.*?)" on my profile$/) do |item_name|

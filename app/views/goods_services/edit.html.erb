@@ -1,14 +1,25 @@
-<h2>Edit Existing Movie</h2>
-<%= form_tag movie_path(@movie), :method => :put do %>
-  <%= label :movie, :title, 'Title', :class => 'col-form-label' %>
-  <%= text_field :movie, 'title', :class => 'form-control' %>
-  <%= label :movie, :rating, 'Rating', :class => 'col-form-label'  %>
-  <%= select :movie, :rating, ['G','PG','PG-13','R','NC-17'], {}, {:class => 'form-control col-1'} %>
-  <%= label :movie, :release_date, 'Released On', :class => 'col-form-label'  %>
-  <%= date_select :movie, :release_date, {}, :class => 'form-control col-2 d-inline' %>
-  <%= label :movie, :director, 'Director', :class => 'col-form-label'  %>
-  <%= text_field :movie, 'director', :class => 'form-control' %>
-  <br/>
-  <%= submit_tag 'Update Movie Info', :class => 'btn btn-primary' %>
-  <%= link_to 'Cancel', movies_path, :class => 'btn btn-secondary' %>
+<h2>Edit Good or Service</h2>
+
+<%= form_for @goods_service, url: goods_service_path(@goods_service), method: :patch, html: { class: "form-horizontal" } do |f| %>
+
+  <div class="form-group">
+    <%= f.label :name, 'Name', class: 'col-form-label' %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, 'Item Description', class: 'col-form-label' %>
+    <%= f.text_area :description, rows: 4, class: 'form-control taller-text-field' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :category, 'Category', class: 'col-form-label' %>
+    <%= f.select :category, {"Good" => 0, "Service" => 1}, {}, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Update', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', '/profile', class: 'btn btn-primary' %>
+  </div>
+
 <% end %>

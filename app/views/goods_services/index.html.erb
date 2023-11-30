@@ -5,8 +5,7 @@
   <%= form_tag goods_services_path, method: :get, class: 'form-inline' do %>
     <%= text_field_tag :query, params[:query], placeholder: "Search goods/services...", id: 'Search-bar', class: 'form-control mr-2' %>
     <%= submit_tag 'Search', class: 'btn btn-secondary mr-2' %>
-    <%= link_to 'Add Friends', "#", class: 'btn btn-primary' %> <!-- Replace "#" with the appropriate path for adding friends. -->
-    <%= link_to 'Edit Profile', profile_path, class: 'btn btn-primary' %>
+    <%= link_to 'Edit Profile', 'profile', class: 'btn btn-primary' %>
   <% end %>
 </div>
 
@@ -29,16 +28,26 @@
       <th>Good/Service</th>
       <th>Name</th>
       <th>Category</th>
+      <th>Degree of Connection</th>
     </tr>
   </thead>
   <tbody>
     <% if @goods_services.any? %>
     <% @goods_services.each do |goods_service| %>
+      <% unless goods_service.user&.user_id.eql?(@logged_in_user) %>
         <tr>
             <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
             <td><%= goods_service.user&.name || "Unknown User" %></td>
             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+            <% if @first_degree_connections.include? goods_service.user&.user_id %>
+              <td><%= "1st" %></td>
+            <% elsif @second_degree_connections.include? goods_service.user&.user_id %>
+              <td><%= "2nd" %></td>
+            <% else %>
+              <td><%= "No Connection" %></td>
+            <% end %>
         </tr>
+      <% end %>
     <% end %>
     <% else %>
         <tr>

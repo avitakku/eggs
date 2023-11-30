@@ -1,0 +1,36 @@
+<h2>All Users</h2>
+
+<!-- Search Bar for Specific User -->
+<div class="mb-3">
+  <%= form_tag("/users", method: "get", class: 'form-inline') do %>
+    <%= text_field_tag :query, params[:query], placeholder: "Search for User", id: 'Search-bar', class: 'form-control mr-2' %>
+    <%= submit_tag 'Search', class: 'btn btn-secondary mr-2' %>
+  <% end %>
+</div>
+
+<table class="table table-striped col-md-12" id="all_users">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @all_users.any? %>
+    <% @all_users.each do |user| %>
+        <tr>
+            <td><%= link_to "#{user.name}", profile_path(user.user_id) %></td>
+            <td><%= user.contact_information %></td>
+        </tr>
+    <% end %>
+    <% else %>
+        <tr>
+            <td colspan="3">No users found.</td>
+        </tr>
+    <% end %>
+
+  </tbody>
+</table>
+
+<%= link_to 'Back to Profile', '/profile', class: 'btn btn-primary' %>
+<%= link_to 'Back to Home', goods_services_path, class: 'btn btn-primary' %>
