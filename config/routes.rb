@@ -15,6 +15,9 @@ Eggs::Application.routes.draw do
 
     get "users", to: "profile#users"
   
+    resource :session, only: [:new, :create, :destroy]
+    resource :registration, only: [:new, :create, :destroy]
+
     get 'sign_up', to: 'users#new', as: :new_user_registration
     get 'login', to: 'sessions#new', as: :new_user_session
   
