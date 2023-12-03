@@ -15,6 +15,10 @@ Eggs::Application.routes.draw do
 
     get "users", to: "profile#users"
   
-    root :to => redirect('/goods_services')
+    get 'sign_up', to: 'users#new', as: :new_user_registration
+    get 'login', to: 'sessions#new', as: :new_user_session
+  
+    root to: 'application#index'
+
   end
   

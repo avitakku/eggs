@@ -8229,3 +8229,1587 @@ DEPRECATION WARNING: `#timestamps` was called without specifying an option for `
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "Mini Fridge"], ["category", 0], ["description", "Mini fridge, freezer, and microwave set"], ["created_at", "2023-11-15 19:43:22.965597"], ["updated_at", "2023-11-15 19:43:22.965597"]]
   [1m[35m (75.2ms)[0m  commit transaction
+  [1m[36m (66.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (68.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUserInformations (20231024225438)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/db/migrate/20231024225438_create_user_informations.rb:12)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.3ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231024225438"]]
+  [1m[36m (72.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateGoodsAndServices (20231024225439)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in up at /home/codio/workspace/eggs/db/migrate/20231024225439_create_goods_and_services.rb:8)
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "goods_and_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "name" varchar, "category" integer, "description" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_goods_and_services_on_user_id" ON "goods_and_services" ("user_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20231024225439"]]
+  [1m[35m (71.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["created_at", "2023-11-30 21:18:42.305548"], ["updated_at", "2023-11-30 21:18:42.305548"]]
+  [1m[36m (70.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "67890"], ["username", "ag4049"], ["name", "Avantika Garg"], ["contact_information", "ag4049@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 2.2], ["created_at", "2023-11-30 21:18:42.380103"], ["updated_at", "2023-11-30 21:18:42.380103"]]
+  [1m[35m (85.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["user_id", "15842"], ["username", "jzm2103"], ["name", "Joshua Mei"], ["contact_information", "jzm2103@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 3.2], ["created_at", "2023-11-30 21:18:42.469303"], ["updated_at", "2023-11-30 21:18:42.469303"]]
+  [1m[36m (72.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["username", "ar4179"], ["name", "Aryan Ray"], ["contact_information", "ar4179@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.7], ["created_at", "2023-11-30 21:18:42.547430"], ["updated_at", "2023-11-30 21:18:42.547430"]]
+  [1m[35m (90.6ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.3ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "agm2208"]]
+  [1m[35mUserInformation Exists (0.2ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '67890'\n- '15842'\n"], ["updated_at", "2023-11-30 21:18:42.668583"], ["id", 1]]
+  [1m[35m (68.7ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "ag4049"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '15842'\n"], ["updated_at", "2023-11-30 21:18:42.750019"], ["id", 2]]
+  [1m[35m (68.6ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "jzm2103"]]
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '67890'\n"], ["updated_at", "2023-11-30 21:18:42.825155"], ["id", 3]]
+  [1m[35m (69.6ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1[0m  [["username", "ar4179"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["name", "Bike"], ["category", 0], ["description", "Mountain bike, 21 gears"], ["created_at", "2023-11-30 21:18:42.913277"], ["updated_at", "2023-11-30 21:18:42.913277"]]
+  [1m[35m (80.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "12345"], ["name", "Tutoring"], ["category", 1], ["description", "Math and science tutoring"], ["created_at", "2023-11-30 21:18:42.997142"], ["updated_at", "2023-11-30 21:18:42.997142"]]
+  [1m[36m (399.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "67890"], ["name", "Textbooks"], ["category", 0], ["description", "Various textbooks for sale"], ["created_at", "2023-11-30 21:18:43.401654"], ["updated_at", "2023-11-30 21:18:43.401654"]]
+  [1m[35m (75.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "15842"], ["name", "Laptop Repair"], ["category", 1], ["description", "Expert laptop repair services"], ["created_at", "2023-11-30 21:18:43.482335"], ["updated_at", "2023-11-30 21:18:43.482335"]]
+  [1m[36m (427.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "Mini Fridge"], ["category", 0], ["description", "Mini fridge, freezer, and microwave set"], ["created_at", "2023-11-30 21:18:43.912482"], ["updated_at", "2023-11-30 21:18:43.912482"]]
+  [1m[35m (776.0ms)[0m  commit transaction
+
+
+Started GET "/" for 128.59.179.5 at 2023-12-03 18:42:54 +0000
+
+
+Started GET "/goods_services" for 128.59.179.5 at 2023-12-03 18:42:55 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36mUserInformation Load (3.2ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (2.9ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.3ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (39.4ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 491ms (Views: 392.9ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/assets/application.self-0c36f7873cf2e1405a2d51971cd8b7df6cd5d610714e9399e3dc202f946187b6.css?body=1" for 128.59.179.5 at 2023-12-03 18:42:55 +0000
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 128.59.179.5 at 2023-12-03 18:42:56 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 128.59.179.5 at 2023-12-03 18:42:56 +0000
+
+
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 128.59.179.5 at 2023-12-03 18:42:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordToUserInformations (20231203190644)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "user_informations" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231203190644"]]
+  [1m[36m (79.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+
+
+
+Started GET "/" for 128.59.179.5 at 2023-12-03 19:24:41 +0000
+
+
+Started GET "/goods_services" for 128.59.179.5 at 2023-12-03 19:24:41 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.2ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (37.3ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 416ms (Views: 334.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/" for 128.59.179.5 at 2023-12-03 19:28:18 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (470.3ms)
+Completed 500 Internal Server Error in 486ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `new_user_registration_path' for #<#<Class:0x00005600fedc1068>:0x00005600fedccb48>):
+    4:     <%= image_tag 'logos/eggs.jpeg', alt: 'Eggs Logo', class: 'logo-image' %>
+    5: </div>
+    6: <div class="center-content">
+    7:     <%= link_to 'Sign Up', new_user_registration_path %> |
+    8:     <%= link_to 'Login', new_user_session_path %>
+    9: </div>
+  app/views/application/index.html.erb:7:in `_app_views_application_index_html_erb___4134146438152836471_47281138029000'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.9ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (35.3ms)
+
+
+Started GET "/" for 128.59.179.5 at 2023-12-03 19:28:32 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (15.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `new_user_registration_path' for #<#<Class:0x00005600fedc1068>:0x00007fdc599d1880>):
+    4:     <%= image_tag 'logos/eggs.jpeg', alt: 'Eggs Logo', class: 'logo-image' %>
+    5: </div>
+    6: <div class="center-content">
+    7:     <%= link_to 'Sign Up', new_user_registration_path %> |
+    8:     <%= link_to 'Login', new_user_session_path %>
+    9: </div>
+  app/views/application/index.html.erb:7:in `_app_views_application_index_html_erb___4134146438152836471_47281138029000'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+
+
+Started GET "/" for 128.59.179.5 at 2023-12-03 19:35:19 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (292.1ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 399ms (Views: 398.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logos/eggs-dfbf7862a2fa87bbef968b530c4bc7bebaf7e203f15fac3933a6e45f346b4d6a.jpg" for 128.59.179.5 at 2023-12-03 19:35:20 +0000
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:24 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:25 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:26 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:26 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:26 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:26 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:26 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:26 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:26 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:35:27 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:28 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:28 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:28 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:28 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:28 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:29 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:30 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:30 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:30 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:30 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:30 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:31 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:36 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:36 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:37 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:35:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 128.59.179.5 at 2023-12-03 19:40:35 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (299.5ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 348ms (Views: 347.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logos/eggs-7a221000e7eb8dcccefb2bea4951fcef7c7b0fba528ccb48f8b8ebc4ab54f522.jpg" for 128.59.179.5 at 2023-12-03 19:40:35 +0000
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:39 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:40:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:43 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:44 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.5 at 2023-12-03 19:40:45 +0000
+Processing by UsersController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/sign_up
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 128.59.179.5 at 2023-12-03 19:51:39 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (270.8ms)
+  Rendered layouts/_flash.erb (0.5ms)
+Completed 200 OK in 310ms (Views: 309.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0c36f7873cf2e1405a2d51971cd8b7df6cd5d610714e9399e3dc202f946187b6.css?body=1" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+
+
+Started GET "/assets/jquery_ujs.self-a6375ab2b275439c922ac52b02a475d288976458aa11a6e8103c925ef2961f66.js?body=1" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+
+
+Started GET "/assets/logos/eggs-7a221000e7eb8dcccefb2bea4951fcef7c7b0fba528ccb48f8b8ebc4ab54f522.jpg" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:40 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:41 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:42 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:43 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:43 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:43 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:43 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.5 at 2023-12-03 19:51:46 +0000
+Processing by SessionsController#new as HTML
+Redirected to https://craftelvis-bravogabriel-3000.codio.io/login
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)

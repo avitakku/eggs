@@ -1,6 +1,8 @@
 class UserInformation < ActiveRecord::Base
     serialize :friends, Array
 
+    has_secure_password
+    
     validate :validate_friends_array
     has_many :goods_and_services, foreign_key: 'user_id', primary_key: 'user_id'
 

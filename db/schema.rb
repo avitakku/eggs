@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20231024225439) do
+ActiveRecord::Schema.define(version: 20231203190644) do
 
   create_table "goods_and_services", force: :cascade do |t|
     t.string   "user_id"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20231024225439) do
     t.text     "friends",             default: "--- []\n"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
   add_index "user_informations", ["user_id"], name: "index_user_informations_on_user_id", unique: true
