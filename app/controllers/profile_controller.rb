@@ -24,6 +24,7 @@ class ProfileController < ApplicationController
     end
 
     def users
+        @logged_in_user = @@logged_in_user
         @all_users = if params[:query].present?
             UserInformation.where("name LIKE ?", "%#{params[:query]}%")
         else
