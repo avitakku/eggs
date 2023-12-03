@@ -18,10 +18,12 @@
   <tbody>
     <% if @all_users.any? %>
     <% @all_users.each do |user| %>
+      <% unless user.user_id.eql?(@logged_in_user) %>
         <tr>
             <td><%= link_to "#{user.name}", profile_path(user.user_id) %></td>
             <td><%= user.contact_information %></td>
         </tr>
+      <% end %>
     <% end %>
     <% else %>
         <tr>
