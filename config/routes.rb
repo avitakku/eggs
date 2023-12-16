@@ -19,7 +19,12 @@ Eggs::Application.routes.draw do
     resource :registration, only: [:new, :create, :destroy]
 
     get 'sign_up', to: 'users#new', as: :new_user_registration
+    
+    
     get 'login', to: 'sessions#new', as: :new_user_session
+    post 'login', to: 'sessions#create', as: :user_session
+    delete 'logout', to: 'sessions#destroy', as: :destroy_user_session
+
   
     root to: 'application#index'
 

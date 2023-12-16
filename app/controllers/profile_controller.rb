@@ -40,7 +40,8 @@ class ProfileController < ApplicationController
     def create
         keys = params[:profile]
         friend_id = keys[:friend_key]
-        
+        Rails.logger.info "Adding friend with ID: #{friend_id}"
+
         users = UserInformation.where(user_id: @@logged_in_user)
         user = nil
         users.each do |x|
@@ -65,6 +66,11 @@ class ProfileController < ApplicationController
             user2_friends = user2.friends
             user2_friends.push(@@logged_in_user)
             user2.update(friends: user2_friends)
+
+
+            Rails.logger.info "Friend added successfully"
+        else
+             Rails.logger.info "Friend not added: Condition not met"
         end
     
         redirect_to controller: :profile, action: :index
