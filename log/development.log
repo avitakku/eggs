@@ -13588,3 +13588,100 @@ JSON::ParserError (767: unexpected token at '---
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+
+
+Started GET "/goods_services" for 209.2.229.182 at 2023-12-16 23:20:38 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 32.1ms | ActiveRecord: 1.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to ChangeFriendsToArrayInUserInformations (20231216232628)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "auser_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" text DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime, "password_digest" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  CREATE UNIQUE INDEX "tindex_auser_informations_on_user_id" ON "auser_informations" ("user_id")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "user_informations"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auser_informations" ("id","user_id","username","name","contact_information","address","rating","photo_url","friends","created_at","updated_at","password_digest") VALUES (1, '12345', 'agm2208', 'Aditi Mutagi', 'agm2208@columbia.edu', '70 Morningside Dr.', 4.5, NULL, '---
+- ''67890''
+- ''15842''
+', '2023-12-16 21:07:57.756586', '2023-12-16 21:07:58.959754', '$2a$12$az6y0FE1xZ3EjCQA1sj2TODCJN42JGrP.BbmttC2n5PHJGHkcuvou')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auser_informations" ("id","user_id","username","name","contact_information","address","rating","photo_url","friends","created_at","updated_at","password_digest") VALUES (2, '67890', 'ag4049', 'Avantika Garg', 'ag4049@columbia.edu', '70 Morningside Dr.', 2.2, NULL, '---
+- ''12345''
+- ''15842''
+', '2023-12-16 21:07:58.125561', '2023-12-16 21:07:59.037740', '$2a$12$eudE0gmuzAMBhfYb/oU5zuQWEmm73nMX1yYRPjTv.IbUUSR.HtWkW')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "auser_informations" ("id","user_id","username","name","contact_information","address","rating","photo_url","friends","created_at","updated_at","password_digest") VALUES (3, '15842', 'jzm2103', 'Joshua Mei', 'jzm2103@columbia.edu', '70 Morningside Dr.', 3.2, NULL, '---
+- ''12345''
+- ''67890''
+', '2023-12-16 21:07:58.500828', '2023-12-16 22:54:49.969758', '$2a$12$oDgEkJ9B0xyVu/HaECEu0uTvVEYm6yJ0jgDtX5SMEfCysqIPT9Blu')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "auser_informations" ("id","user_id","username","name","contact_information","address","rating","photo_url","friends","created_at","updated_at","password_digest") VALUES (4, '94213', 'ar4179', 'Aryan Ray', 'ar4179@columbia.edu', '70 Morningside Dr.', 4.7, NULL, '---
+- ''15842''
+', '2023-12-16 21:07:58.873234', '2023-12-16 22:54:59.043850', '$2a$12$aZ9f8mjIiI.vRQYTuUwSRecBRp7BZMKzAIB2bki5haN2.oi7NHtFa')[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "user_informations"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "user_informations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "username" varchar, "name" varchar, "contact_information" varchar, "address" varchar, "rating" float, "photo_url" varchar, "friends" varchar DEFAULT '--- []
+', "created_at" datetime, "updated_at" datetime, "password_digest" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_auser_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_auser_informations_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_user_informations_on_user_id" ON "user_informations" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "auser_informations"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "user_informations" ("id","user_id","username","name","contact_information","address","rating","photo_url","friends","created_at","updated_at","password_digest") VALUES (1, '12345', 'agm2208', 'Aditi Mutagi', 'agm2208@columbia.edu', '70 Morningside Dr.', 4.5, NULL, '---
+- ''67890''
+- ''15842''
+', '2023-12-16 21:07:57.756586', '2023-12-16 21:07:58.959754', '$2a$12$az6y0FE1xZ3EjCQA1sj2TODCJN42JGrP.BbmttC2n5PHJGHkcuvou')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "user_informations" ("id","user_id","username","name","contact_information","address","rating","photo_url","friends","created_at","updated_at","password_digest") VALUES (2, '67890', 'ag4049', 'Avantika Garg', 'ag4049@columbia.edu', '70 Morningside Dr.', 2.2, NULL, '---
+- ''12345''
+- ''15842''
+', '2023-12-16 21:07:58.125561', '2023-12-16 21:07:59.037740', '$2a$12$eudE0gmuzAMBhfYb/oU5zuQWEmm73nMX1yYRPjTv.IbUUSR.HtWkW')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "user_informations" ("id","user_id","username","name","contact_information","address","rating","photo_url","friends","created_at","updated_at","password_digest") VALUES (3, '15842', 'jzm2103', 'Joshua Mei', 'jzm2103@columbia.edu', '70 Morningside Dr.', 3.2, NULL, '---
+- ''12345''
+- ''67890''
+', '2023-12-16 21:07:58.500828', '2023-12-16 22:54:49.969758', '$2a$12$oDgEkJ9B0xyVu/HaECEu0uTvVEYm6yJ0jgDtX5SMEfCysqIPT9Blu')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "user_informations" ("id","user_id","username","name","contact_information","address","rating","photo_url","friends","created_at","updated_at","password_digest") VALUES (4, '94213', 'ar4179', 'Aryan Ray', 'ar4179@columbia.edu', '70 Morningside Dr.', 4.7, NULL, '---
+- ''15842''
+', '2023-12-16 21:07:58.873234', '2023-12-16 22:54:59.043850', '$2a$12$aZ9f8mjIiI.vRQYTuUwSRecBRp7BZMKzAIB2bki5haN2.oi7NHtFa')
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "auser_informations"[0m
+  [1m[35mSQL (2.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20231216232628"]]
+  [1m[36m (67.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20231203190644) do
+ActiveRecord::Schema.define(version: 20231216232628) do
 
   create_table "goods_and_services", force: :cascade do |t|
     t.string   "user_id"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20231203190644) do
     t.string   "address"
     t.float    "rating"
     t.string   "photo_url"
-    t.text     "friends",             default: "--- []\n"
+    t.string   "friends",             default: "--- []\n"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
