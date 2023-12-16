@@ -52,6 +52,46 @@ class GoodsServicesController < ApplicationController
         GoodsAndService.all
       end
 
+      all_users = UserInformation.all
+      
+      @no_degree_connections = []
+      all_users.each do |user|
+        unless @first_degree_connections.include?(user.user_id) or @second_degree_connections.include?(user.user_id)
+          @no_degree_connections.push(user.user_id)
+        end
+      end
+
+      @no_conn_goods_services = []
+      @no_degree_connections.each do |user_id|
+        GoodsAndService.where(user_id: user_id).each do |good|
+          unless user_id == @@logged_in_user
+            @no_conn_goods_services.push(good)
+          end
+        end
+      end
+
+      @first_conn_goods_services = []
+      @first_degree_connections.each do |user_id|
+        GoodsAndService.where(user_id: user_id).each do |good|
+          unless user_id == @@logged_in_user
+            @first_conn_goods_services.push(good)
+          end
+        end
+      end
+
+      @second_conn_goods_services = []
+      @second_degree_connections.each do |user_id|
+        GoodsAndService.where(user_id: user_id).each do |good|
+          unless user_id == @@logged_in_user
+            @second_conn_goods_services.push(good)
+          end
+        end
+      end
+
+      @no_conn_goods_services.each do |good|
+        puts good.name
+      end
+
   
       @goods_services = @goods_services.where(category: category_ids_from_names(@categories_to_show))
     end

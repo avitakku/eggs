@@ -32,26 +32,30 @@
     </tr>
   </thead>
   <tbody>
-    <% if @goods_services.any? %>
-    <% @goods_services.each do |goods_service| %>
-      <% unless goods_service.user&.user_id.eql?(@logged_in_user) %>
+    <% @no_conn_goods_services.each do |goods_service| %>
         <tr>
             <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
             <td><%= goods_service.user&.name || "Unknown User" %></td>
             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
-            <% if @first_degree_connections.include? goods_service.user&.user_id %>
-              <td><%= "1st" %></td>
-            <% elsif @second_degree_connections.include? goods_service.user&.user_id %>
-              <td><%= "2nd" %></td>
-            <% else %>
-              <td><%= "No Connection" %></td>
-            <% end %>
+            <td><%= "No Connection" %></td>
         </tr>
-      <% end %>
     <% end %>
-    <% else %>
+
+    <% @first_conn_goods_services.each do |goods_service| %>
         <tr>
-            <td colspan="3">No goods or services found.</td>
+            <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
+            <td><%= goods_service.user&.name || "Unknown User" %></td>
+            <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+            <td><%= "1st" %></td>
+        </tr>
+    <% end %>
+
+    <% @second_conn_goods_services.each do |goods_service| %>
+        <tr>
+            <td><%= link_to "#{goods_service.name}", goods_service_path(goods_service) %></td>
+            <td><%= goods_service.user&.name || "Unknown User" %></td>
+            <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
+            <td><%= "2nd" %></td>
         </tr>
     <% end %>
 
