@@ -1,5 +1,4 @@
 class UserInformation < ActiveRecord::Base
-  serialize :friends, Array
 
     has_secure_password
     
