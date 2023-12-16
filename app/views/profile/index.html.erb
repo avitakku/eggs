@@ -1,7 +1,3 @@
-<head>
-<%= javascript_include_tag 'application' %>
-</head>
-
 <h1>Profile Page</h1>
 
 <p>Name: <%= @user.name %></p>
@@ -30,12 +26,12 @@
             <td><%= goods_service.user&.name || "Unknown User" %></td>
             <td><%= goods_service.category == 0 ? "Good" : "Service" %></td>
             <td><%= link_to "Edit", edit_goods_service_path(goods_service), class: 'btn btn-primary' %></td>
-            <td><%= link_to "Delete", goods_service_path(goods_service), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+            <td><%= link_to "Delete", goods_service_path(goods_service), method: :delete, data: { confirm: 'Are you sure?', turbolinks: false }, class: 'btn btn-danger' %></td>
         </tr>
     <% end %>
     <% else %>
         <tr>
-            <td colspan="3">No goods or services found.</td>
+            <td colspan="5">No goods or services found.</td>
         </tr>
     <% end %>
   </tbody>

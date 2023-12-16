@@ -40,26 +40,40 @@ class ProfileController < ApplicationController
     def create
         keys = params[:profile]
         friend_id = keys[:friend_key]
-      
+        target_id = params[:user_id]
+
         user = UserInformation.find_by(user_id: @@logged_in_user)
+
         if user.nil?
-          return redirect_to controller: :profile, action: :index
-        end
-      
-        unless user.friends.include?(friend_id) || friend_id.eql?(@@logged_in_user)
-          user.friends.push(friend_id)
-          if user.save
-            Rails.logger.info "Friend added successfully: #{user.friends.inspect}"
-          else
-            Rails.logger.error "Failed to save user with updated friends: #{user.errors.full_messages.join(', ')}"
-          end
+          flash[:notice] = "User not found!"
+          redirect_to controller: :profile, action: :index
         else
-          Rails.logger.info "Friend not added: Condition not met or already a friend"
+          friends = user.friends
+
+          if friends.include?(friend_id) || friend_id.eql?(@@logged_in_user)
+            flash[:notice] = "You are already friends with this user!"
+          elsif target_id != friend_id
+            flash[:notice] = "Incorrect Friend Key!"
+          else
+            # Add friend to the logged-in user's friend list
+            friends.push(friend_id)
+            user.update(friends: friends)
+
+            # Find the friend and add the logged-in user to their friend list
+            friend = UserInformation.find_by(user_id: friend_id)
+
+            if friend
+              friend_friends = friend.friends
+              friend_friends.push(@@logged_in_user)
+              friend.update(friends: friend_friends)
+              flash[:notice] = "Friend added successfully: #{friend_id}"
+            else
+              flash[:notice] = "Friend not found!"
+            end
+          end
+
+          redirect_to controller: :profile, action: :index
         end
-      
-        redirect_to controller: :profile, action: :index
-      end
-      
 
     def destroy
         id = params[:id]
