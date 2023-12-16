@@ -40,11 +40,9 @@ class ProfileController < ApplicationController
     def create
         keys = params[:profile]
         friend_id = keys[:friend_key]
-        Rails.logger.info "Adding friend with ID: #{friend_id}"
       
         user = UserInformation.find_by(user_id: @@logged_in_user)
         if user.nil?
-          Rails.logger.error "User not found"
           return redirect_to controller: :profile, action: :index
         end
       
