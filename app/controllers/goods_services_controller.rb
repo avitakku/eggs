@@ -52,6 +52,8 @@ class GoodsServicesController < ApplicationController
         GoodsAndService.all
       end
 
+      @goods_services = @goods_services.where(category: category_ids_from_names(@categories_to_show))
+
       all_users = UserInformation.all
       
       @no_degree_connections = []
@@ -65,7 +67,9 @@ class GoodsServicesController < ApplicationController
       @no_degree_connections.each do |user_id|
         GoodsAndService.where(user_id: user_id).each do |good|
           unless user_id == @@logged_in_user
-            @no_conn_goods_services.push(good)
+            if @goods_services.include?(good)
+              @no_conn_goods_services.push(good)
+            end
           end
         end
       end
@@ -74,7 +78,9 @@ class GoodsServicesController < ApplicationController
       @first_degree_connections.each do |user_id|
         GoodsAndService.where(user_id: user_id).each do |good|
           unless user_id == @@logged_in_user
-            @first_conn_goods_services.push(good)
+            if @goods_services.include?(good)
+              @first_conn_goods_services.push(good)
+            end
           end
         end
       end
@@ -83,7 +89,9 @@ class GoodsServicesController < ApplicationController
       @second_degree_connections.each do |user_id|
         GoodsAndService.where(user_id: user_id).each do |good|
           unless user_id == @@logged_in_user
-            @second_conn_goods_services.push(good)
+            if @goods_services.include?(good)
+              @second_conn_goods_services.push(good)
+            end
           end
         end
       end
@@ -92,8 +100,6 @@ class GoodsServicesController < ApplicationController
         puts good.name
       end
 
-  
-      @goods_services = @goods_services.where(category: category_ids_from_names(@categories_to_show))
     end
   
     def create
