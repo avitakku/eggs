@@ -1,5 +1,5 @@
 class UserInformation < ActiveRecord::Base
-  serialize :friends, Array, coder: YAML
+  serialize :friends, Array
 
     has_secure_password
     
