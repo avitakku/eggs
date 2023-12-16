@@ -41,40 +41,27 @@ class ProfileController < ApplicationController
         keys = params[:profile]
         friend_id = keys[:friend_key]
         Rails.logger.info "Adding friend with ID: #{friend_id}"
-
-        users = UserInformation.where(user_id: @@logged_in_user)
-        user = nil
-        users.each do |x|
-            user = x
+      
+        user = UserInformation.find_by(user_id: @@logged_in_user)
+        if user.nil?
+          Rails.logger.error "User not found"
+          return redirect_to controller: :profile, action: :index
         end
-
-        friends = user.friends
-        
-        if (not(friends.include? friend_id)) and (not(friend_id.eql?(@@logged_in_user)))
-
-            # add friend to logged in user's friend list
-            friends.push(friend_id)
-            user.update(friends: friends)
-
-            users = UserInformation.where(user_id: friend_id)
-            user2 = nil
-            users.each do |x|
-                user2 = x
-            end
-            
-            # add logged in user to friend's friend list
-            user2_friends = user2.friends
-            user2_friends.push(@@logged_in_user)
-            user2.update(friends: user2_friends)
-
-
-            Rails.logger.info "Friend added successfully"
+      
+        unless user.friends.include?(friend_id) || friend_id.eql?(@@logged_in_user)
+          user.friends.push(friend_id)
+          if user.save
+            Rails.logger.info "Friend added successfully: #{user.friends.inspect}"
+          else
+            Rails.logger.error "Failed to save user with updated friends: #{user.errors.full_messages.join(', ')}"
+          end
         else
-             Rails.logger.info "Friend not added: Condition not met"
+          Rails.logger.info "Friend not added: Condition not met or already a friend"
         end
-    
+      
         redirect_to controller: :profile, action: :index
-    end
+      end
+      
 
     def destroy
         id = params[:id]

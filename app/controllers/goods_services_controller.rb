@@ -59,6 +59,7 @@ class GoodsServicesController < ApplicationController
     def create
       goods = params[:goods_service]
       name = goods[:name]
+      Rails.logger.info "Adding good/service with name: #{name}"
       category = goods[:category]
       description = goods[:description]
       puts name

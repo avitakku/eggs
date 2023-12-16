@@ -13209,3 +13209,351 @@ Processing by ProfileController#index as HTML
   Rendered profile/index.html.erb within layouts/application (6.8ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 209.2.229.182 at 2023-12-16 22:39:12 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (222.3ms)
+  Rendered layouts/_flash.erb (0.6ms)
+Completed 200 OK in 255ms (Views: 255.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 209.2.229.182 at 2023-12-16 22:39:14 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 27.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services" for 209.2.229.182 at 2023-12-16 22:39:15 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36mUserInformation Load (0.3ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "15842"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.2ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.3ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (27.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 116ms (Views: 43.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:39:16 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/profile/15842" for 209.2.229.182 at 2023-12-16 22:39:24 +0000
+Processing by ProfileController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zHTaeIAJEpXbphlDQJ7bxefGxoBnlUj+eTNqEGbCWhyZ4bhYmMujByIdYWjXcqCm4eTyetZ9eK5rHLE8TSjbcg==", "id"=>"15842"}
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", nil], ["updated_at", "2023-12-16 22:39:24.228518"], ["id", 4]]
+  [1m[35m (72.8ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '12345'\n- '67890'\n"], ["updated_at", "2023-12-16 22:39:24.314506"], ["id", 3]]
+  [1m[35m (95.6ms)[0m  commit transaction
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 189ms (ActiveRecord: 169.8ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:39:25 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 209.2.229.182 at 2023-12-16 22:39:29 +0000
+Processing by ProfileController#users as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "user_informations"[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations"
+  Rendered profile/users.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile/15842" for 209.2.229.182 at 2023-12-16 22:39:31 +0000
+Processing by ProfileController#show as HTML
+  Parameters: {"id"=>"15842"}
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  Rendered profile/show.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/profile" for 209.2.229.182 at 2023-12-16 22:39:33 +0000
+Processing by ProfileController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D9qwOfQ7TTyENDR66+2UOddZKG7sA0s498kQ72B+elRaT9IZ7Pn8rn2PTFF8Ae9a0XsclF3re2jl5svDS5T7Og==", "profile"=>{"friend_key"=>"15842"}, "commit"=>"Add"}
+Adding friend with ID: 15842
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?[0m  [["friends", "---\n- '15842'\n"], ["updated_at", "2023-12-16 22:39:33.439929"], ["id", 4]]
+  [1m[35m (65.8ms)[0m  commit transaction
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Exists (0.0ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '12345'\n- '67890'\n- '94213'\n"], ["updated_at", "2023-12-16 22:39:33.511167"], ["id", 3]]
+  [1m[36m (71.6ms)[0m  [1mcommit transaction[0m
+Friend added successfully
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 148ms (ActiveRecord: 138.3ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:39:33 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 209.2.229.182 at 2023-12-16 22:42:36 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 209.2.229.182 at 2023-12-16 22:42:37 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services" for 209.2.229.182 at 2023-12-16 22:42:38 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "15842"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "15842"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 19.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:42:40 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/goods_services/new" for 209.2.229.182 at 2023-12-16 22:42:41 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/goods_services" for 209.2.229.182 at 2023-12-16 22:42:44 +0000
+Processing by GoodsServicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jeOT8XDs92b86V8miox+nFtNbQMg79l5svaxULUYGaHYdvHRaC5G9AVSJw0dYAX/XW9Z+ZEH6Smg2Wp8nvKYzw==", "goods_service"=>{"name"=>"pencil", "description"=>"", "category"=>"0"}, "commit"=>"Post"}
+Adding good/service with name: pencil
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["user_id", "94213"], ["name", "pencil"], ["category", 0], ["description", ""], ["created_at", "2023-12-16 22:42:44.406525"], ["updated_at", "2023-12-16 22:42:44.406528"]]
+  [1m[36m (62.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 67ms (ActiveRecord: 63.5ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:42:44 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_flash.erb (0.2ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/goods_services/new" for 209.2.229.182 at 2023-12-16 22:44:02 +0000
+Processing by GoodsServicesController#new as HTML
+  Rendered goods_services/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/goods_services" for 209.2.229.182 at 2023-12-16 22:44:04 +0000
+Processing by GoodsServicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mtd7GFzFHzXRH/qf4DlJz5cEqRLrHNja7jVNAQU6Ja7PQhk4RAeupyikgrR31TKskSad6Fr06Ir8GpYtLtCkwA==", "goods_service"=>{"name"=>"egg", "description"=>"egg", "category"=>"0"}, "commit"=>"Post"}
+Adding good/service with name: egg
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "goods_and_services" ("user_id", "name", "category", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["user_id", "94213"], ["name", "egg"], ["category", 0], ["description", "egg"], ["created_at", "2023-12-16 22:44:04.559656"], ["updated_at", "2023-12-16 22:44:04.559656"]]
+  [1m[35m (67.4ms)[0m  commit transaction
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 71ms (ActiveRecord: 68.0ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:44:04 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "15842"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 209.2.229.182 at 2023-12-16 22:54:41 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 209.2.229.182 at 2023-12-16 22:54:42 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/goods_services" for 209.2.229.182 at 2023-12-16 22:54:43 +0000
+Processing by GoodsServicesController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."category" IN (0, 1)[0m
+  [1m[35mUserInformation Load (0.2ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "12345"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "67890"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered goods_services/index.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 19.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:54:44 +0000
+Processing by ProfileController#index as HTML
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "15842"]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/profile/15842" for 209.2.229.182 at 2023-12-16 22:54:49 +0000
+Processing by ProfileController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NsOuinOxnelV9XFfwayRKInkVPTS6tpMpFNgaaBovZBjVsyqa3Mse6xOCXRWQOpLj8ZgDmMC6hy2fLtFi4I8/g==", "id"=>"15842"}
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", nil], ["updated_at", "2023-12-16 22:54:49.895583"], ["id", 4]]
+  [1m[36m (68.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "15842"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mUserInformation Exists (0.1ms)[0m  SELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "12345"]]
+  [1m[36mUserInformation Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "67890"]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '12345'\n- '67890'\n"], ["updated_at", "2023-12-16 22:54:49.969758"], ["id", 3]]
+  [1m[36m (67.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 147ms (ActiveRecord: 137.4ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:54:50 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mGoodsAndService Load (0.1ms)[0m  SELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 209.2.229.182 at 2023-12-16 22:54:54 +0000
+Processing by ProfileController#users as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "user_informations"
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT "user_informations".* FROM "user_informations"[0m
+  Rendered profile/users.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile/15842" for 209.2.229.182 at 2023-12-16 22:54:56 +0000
+Processing by ProfileController#show as HTML
+  Parameters: {"id"=>"15842"}
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "15842"]]
+  Rendered profile/show.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/profile" for 209.2.229.182 at 2023-12-16 22:54:59 +0000
+Processing by ProfileController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iJk706pGmpkZ31v9kydvWatZLsABOJCD0hkLxUtu3xPdDFnzsoQrC+BkI9YEyxQ6rXsaOrDQoNPANtDpYIRefQ==", "profile"=>{"friend_key"=>"15842"}, "commit"=>"Add"}
+Adding friend with ID: 15842
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mUserInformation Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "15842"]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "user_informations" SET "friends" = ?, "updated_at" = ? WHERE "user_informations"."id" = ?  [["friends", "---\n- '15842'\n"], ["updated_at", "2023-12-16 22:54:59.043850"], ["id", 4]]
+  [1m[36m (77.7ms)[0m  [1mcommit transaction[0m
+Friend added successfully: ["15842"]
+Redirected to https://fordorion-tibetmobile-3000.codio.io/profile
+Completed 302 Found in 83ms (ActiveRecord: 78.2ms)
+
+
+Started GET "/profile" for 209.2.229.182 at 2023-12-16 22:54:59 +0000
+Processing by ProfileController#index as HTML
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ?[0m  [["user_id", "15842"]]
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?  [["user_id", "94213"]]
+  [1m[36mGoodsAndService Load (0.1ms)[0m  [1mSELECT "goods_and_services".* FROM "goods_and_services" WHERE "goods_and_services"."user_id" = ?[0m  [["user_id", "94213"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1[0m  [["user_id", "94213"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."user_id" = ? LIMIT 1  [["user_id", "94213"]]
+  Rendered profile/index.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.5ms)
