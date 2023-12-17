@@ -80,7 +80,7 @@ user_information_data.each do |user_info|
       address: user_info[:address],
       rating: user_info[:rating],
       friends: [], # initialize with empty array
-      password: "defaultPassword", 
+      password: "defaultPassword", # Add a default password
       password_confirmation: "defaultPassword"
     )
   end

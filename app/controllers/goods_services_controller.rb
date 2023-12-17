@@ -1,7 +1,8 @@
 class GoodsServicesController < ApplicationController
+    before_action :set_logged_in_user
+    before_action :set_goods_service, only: [:show, :edit, :update, :destroy]
 
-    @@logged_in_user = "94213"
-  
+
     def show
       id = params[:id]
       @good_service = GoodsAndService.find(id)
@@ -12,15 +13,13 @@ class GoodsServicesController < ApplicationController
   
     def index
       
-      @logged_in_user = @@logged_in_user
-
       @all_categories = [ "Good", "Service" ]
       @categories_to_show = params[:categories]&.keys || @all_categories
 
       @first_degree_connections = []
       @second_degree_connections = []
 
-      users = UserInformation.where(user_id: @@logged_in_user)
+      users = UserInformation.where(user_id: @logged_in_user)
       @user = nil
       users.each do |user|
           @user = user
@@ -111,12 +110,11 @@ class GoodsServicesController < ApplicationController
       puts name
       puts category
       puts description 
-      @good_service = GoodsAndService.create!(user_id: @@logged_in_user, name: name, category: category, description: description, created_at: Time.new, updated_at: Time.new)
+      @good_service = GoodsAndService.create!(user_id: @logged_in_user, name: name, category: category, description: description, created_at: Time.new, updated_at: Time.new)
       flash[:notice] = "Goods/Service was successfully added."
       redirect_to controller: :profile, action: :index
     end
   
-    before_action :set_goods_service, only: [:show, :edit, :update, :destroy]
 
     def edit
         @goods_service = GoodsAndService.find(params[:id])
@@ -142,6 +140,10 @@ class GoodsServicesController < ApplicationController
     end
 
     private
+
+    def set_logged_in_user
+      @logged_in_user = session[:user_id] # Assuming you store user_id in the session during login
+    end
 
     def set_goods_service
       @goods_service = GoodsAndService.find(params[:id])
