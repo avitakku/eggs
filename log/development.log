@@ -18384,3 +18384,25 @@ Processing by UsersController#new as HTML
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms)
 >>>>>>> origin/user_reg_pls_work
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_goods_and_services_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_user_informations_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "user_informations" ("user_id", "username", "name", "contact_information", "address", "rating", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", "12345"], ["username", "agm2208"], ["name", "Aditi Mutagi"], ["contact_information", "agm2208@columbia.edu"], ["address", "70 Morningside Dr."], ["rating", 4.5], ["password_digest", "$2a$12$VYHa9hsZpKClyjCoY54Qx.oh1c03YWvcvmgl3W2gYyQLE4J/YALe."], ["created_at", "2023-12-17 06:15:53.416759"], ["updated_at", "2023-12-17 06:15:53.416759"]]
+  [1m[35m (0.1ms)[0m  rollback transaction
