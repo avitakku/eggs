@@ -1,5 +1,4 @@
 class ProfileController < ApplicationController
-
     @@logged_in_user = "94213"
 
     def index
@@ -40,40 +39,46 @@ class ProfileController < ApplicationController
     def create
         keys = params[:profile]
         friend_id = keys[:friend_key]
+
         target_id = params[:user_id]
 
-        user = UserInformation.find_by(user_id: @@logged_in_user)
+        users = UserInformation.where(user_id: @@logged_in_user)
+        user = nil
+        users.each do |x|
+            user = x
+        end
 
-        if user.nil?
-          flash[:notice] = "User not found!"
-          redirect_to controller: :profile, action: :index
-        else
-          friends = user.friends
-
-          if friends.include?(friend_id) || friend_id.eql?(@@logged_in_user)
+        friends = user.friends
+        
+        if (friends.include? friend_id) or (friend_id.eql?(@@logged_in_user))
             flash[:notice] = "You are already friends with this user!"
-          elsif target_id != friend_id
+            redirect_to controller: :profile, action: :index
+
+        elsif (not(target_id == friend_id))
             flash[:notice] = "Incorrect Friend Key!"
-          else
-            # Add friend to the logged-in user's friend list
+            redirect_to controller: :profile, action: :index
+
+        else
+            # add friend to logged in user's friend list
             friends.push(friend_id)
             user.update(friends: friends)
 
-            # Find the friend and add the logged-in user to their friend list
-            friend = UserInformation.find_by(user_id: friend_id)
-
-            if friend
-              friend_friends = friend.friends
-              friend_friends.push(@@logged_in_user)
-              friend.update(friends: friend_friends)
-              flash[:notice] = "Friend added successfully: #{friend_id}"
-            else
-              flash[:notice] = "Friend not found!"
+            users = UserInformation.where(user_id: friend_id)
+            user2 = nil
+            users.each do |x|
+                user2 = x
             end
-          end
+            
+            # add logged in user to friend's friend list
+            user2_friends = user2.friends
+            user2_friends.push(@@logged_in_user)
+            user2.update(friends: user2_friends)
 
-          redirect_to controller: :profile, action: :index
+            redirect_to controller: :profile, action: :index
+
         end
+    
+    end
 
     def destroy
         id = params[:id]
