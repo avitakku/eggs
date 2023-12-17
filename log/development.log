@@ -16397,3 +16397,454 @@ Processing by ProfileController#index as HTML
   Rendered profile/index.html.erb within layouts/application (4.9ms)
   Rendered layouts/_flash.erb (0.1ms)
 Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:33:45 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (23.5ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 286ms (Views: 250.4ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:35:28 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h3OUvJeoTjD0COX3QgIAJwlSBGGjyKj7bsxnnaa8YC7rYSYv+XBZ8NXdPOxEoIO8+Uu4qEH7cKXBsM7gSxDgLg==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 315ms (Views: 9.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:35:44 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:35:46 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:35:57 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mp4ouHJ5sp5bLp+vnXguHq/MXe9TN6h1BIvoWnhcYVj2jJorHKGlXnr7RrSb2q2FX9XhJrEEcCur90EnlfDhWA==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 304ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:37:39 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:37:40 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 12.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:37:53 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TUQ82kYhVi9+Q8AocpQJUC+eOypOZXQMK6YnrOTErqchVo5JKPlB71+WGTN0NorL34eH46xWrFKE2o7RCWgupw==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"test@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 304ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:38:14 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:38:15 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:38:25 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"45m4QyKqI8YJrfSswnp+2WwTEDYRffxiLqp2FiYzW72PiwrQTHI0Bih4LbfE2P1CnAqs//NOJDyB1t9ry5/bvQ==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"s@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 303ms (Views: 8.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:38:30 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P3NnxcTi/bse3w3BU6n9InODzJyspkf80/FEos0Kdb9TYdVWqjrqez8K1NpVC365g5pwVU6Vn6J8je3fIKb1vw==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"s@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 303ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:39:50 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:39:52 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:40:01 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UwspQiINrnozKWqo7xKrXyvwFfUA9DQT80MO8eCJs9c/GZvRTNW5uhL8s7PpsCjE2+mpPOLH7E1cP6eMDSUz1w==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"r@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 305ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:40:11 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:40:12 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/codio/workspace/eggs/app/views/users/new.html.erb:44: syntax error, unexpected *
+....append=( f.label :password % *><br />
+...                              ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:46: unmatched close parenthesis: />
+    <% if @minimum_password_length );@output_buffer.safe_append='
+      <em>('.freeze;@output_buffer.append=( @minimum_password_length );@output_buffer.safe_append=' characters minimum)</m
+/home/codio/workspace/eggs/app/views/users/new.html.erb:49: syntax error, unexpected '<', expecting ')'
+    <span class="error" id="passwo...
+    ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting ')'
+    <span class="error" id="password-error"></span>
+                        ^~
+/home/codio/workspace/eggs/app/views/users/new.html.erb:49: syntax error, unexpected '<'
+...s="error" id="password-error"></span>
+...                              ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:50: unknown regexp options - dv
+/home/codio/workspace/eggs/app/views/users/new.html.erb:51: syntax error, unexpected '<'
+  <br>
+  ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:54: syntax error, unexpected '<'
+...@output_buffer.safe_append=' *<br />
+...                              ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:56: unknown regexp options - dv
+/home/codio/workspace/eggs/app/views/users/new.html.erb:57: syntax error, unexpected '<'
+  <br>
+  ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:60: syntax error, unexpected tCONSTANT, expecting ')'
+..._buffer.append=( f.submit 'Sign Up', class: 'btn btn-primary...
+...                           ^~~~
+/home/codio/workspace/eggs/app/views/users/new.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+...f.submit 'Sign Up', class: 'btn btn-primary' );@output_buffe...
+...                            ^~~
+/home/codio/workspace/eggs/app/views/users/new.html.erb:60: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+...n Up', class: 'btn btn-primary' );@output_buffer.safe_append...
+...                              ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:61: syntax error, unexpected '<', expecting ')'
+  </div>
+  ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:66: unterminated regexp meets end of file
+          end
+              ^
+/home/codio/workspace/eggs/app/views/users/new.html.erb:66: syntax error, unexpected end-of-input, expecting ')'):
+  app/views/users/new.html.erb:44: syntax error, unexpected *
+  app/views/users/new.html.erb:46: unmatched close parenthesis: />
+  app/views/users/new.html.erb:49: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:49: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/users/new.html.erb:49: syntax error, unexpected '<'
+  app/views/users/new.html.erb:50: unknown regexp options - dv
+  app/views/users/new.html.erb:51: syntax error, unexpected '<'
+  app/views/users/new.html.erb:54: syntax error, unexpected '<'
+  app/views/users/new.html.erb:56: unknown regexp options - dv
+  app/views/users/new.html.erb:57: syntax error, unexpected '<'
+  app/views/users/new.html.erb:60: syntax error, unexpected tCONSTANT, expecting ')'
+  app/views/users/new.html.erb:60: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/users/new.html.erb:60: syntax error, unexpected tSTRING_BEG, expecting do or '{' or '('
+  app/views/users/new.html.erb:61: syntax error, unexpected '<', expecting ')'
+  app/views/users/new.html.erb:66: unterminated regexp meets end of file
+  app/views/users/new.html.erb:66: syntax error, unexpected end-of-input, expecting ')'
+
+
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /var/lib/gems/2.6.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.7ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:41:18 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:41:19 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:41:29 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"22yVt2w/N3o5MIcdUS9rd+s40YXcAGmse8hYL+iLnXK3fickAucguhjlXgZXjejsGyFtTD4zsfLUtPFSBScdcg==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"test@g", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 304ms (Views: 8.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:42:30 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:42:31 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:42:38 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bqfyog35Ze2ZmRe1x25fM2NBEKFyebUnHd15kLpQNH8CtUAxYyFyLbhMzq7BzNyok1isaJBKbXmyodDtV/y0fw==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"r@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 305ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:42:54 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:43:03 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MDfPRf8ZHPH+1Uh7mKvryOBqEPhFx6JuNV+KyKHuvKpcJX3WkcELMd8AkWCeCWhTEHOsMaf0ejCaIyO1TEI8qg==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"s@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 304ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:43:12 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dYYfaf4CnJoP5V5UKwrdiz4HZ0vX0FKJGGCNX9KdHTsZlK36kNqLWi4wh08tqF4Qzh7bgjXjite3HCQiPzGdOw==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"s@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 314ms (Views: 8.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:43:39 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:43:40 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:43:48 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+hsHAYpFXWRVLmdwo65UIbV3RlE6KejGvO6h2TuARTCWCbWS5J1KpHT7vmulDNe6RW76mNgaMJgTkgik1izFMA==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"test@g", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 304ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:44:19 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:44:20 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:44:31 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3IFyeeN6xhm2a3j/kJS3UAgpN5g3O+6rklfYlK0U2+Owk8DqjaLR2Ze+oeSWNjTL+DCLUdUINvU9K3HpQLhb4w==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"test@g", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 302ms (Views: 8.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:45:35 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:45:37 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:45:45 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y3GMmek0mNK9rCt5oHys4Qm/yGheZPmHRDt+N9XH2rinYz4Kh+yPEpx58mKm3i96+aZ0obxXIdnrR9dKOGtauA==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"s@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 303ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:46:56 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.26 at 2023-12-17 01:46:57 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 128.59.179.26 at 2023-12-17 01:47:47 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2GnD4XtZjYO79yn0D33o8Cz94pU0279LlJJHLAA0a+C0e3FyFYGaQ5oi8O8J32tr3OReXNboZxU77u5R7Zjr4A==", "session"=>{"email_or_username"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUserInformation Load (0.2ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."contact_information" = ? LIMIT 1[0m  [["contact_information", "test"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "test"]]
+  Rendered sessions/new.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 307ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:48:27 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 128.59.179.26 at 2023-12-17 01:48:28 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 128.59.179.26 at 2023-12-17 01:48:31 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"owNGYvBZO3Jzacx6KVM5KZ2YeCgCK662RnddwJ7EG4LPEfTxnoEsslK8FWEv8bqybYHE4eAYdujpC/S9c2ibgg==", "session"=>{"email_or_username"=>"test", "password"=>"[FILTERED]"}, "commit"=>"Log In"}
+  [1m[36mUserInformation Load (0.1ms)[0m  [1mSELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."contact_information" = ? LIMIT 1[0m  [["contact_information", "test"]]
+  [1m[35mUserInformation Load (0.1ms)[0m  SELECT  "user_informations".* FROM "user_informations" WHERE "user_informations"."username" = ? LIMIT 1  [["username", "test"]]
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 302ms (Views: 7.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 128.59.179.26 at 2023-12-17 01:48:48 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:48:50 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 128.59.179.26 at 2023-12-17 01:49:13 +0000
+Processing by ApplicationController#index as HTML
+  Rendered application/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:49:14 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:49:25 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZVHr2Grcd8g6geHTJOVNJzLLSmrjz3eXEPnq0bZWZwQJQ1lLBARgCBtUOMgiR868wtL2owH8r8m/hUOsW/rnBA==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"r@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 303ms (Views: 8.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/sign_up" for 128.59.179.26 at 2023-12-17 01:49:29 +0000
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+AHyKbSDVx/nC/GNbMogCaXdUKzs87eA36bZETwdG/SUE0C62ltA38beKJZqaKOSVcTsZQ7Ab95w2nBs0bGb9A==", "user_information"=>{"name"=>"test", "username"=>"test", "address"=>"", "photo_url"=>"", "contact_information"=>"r@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign Up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 305ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_up" for 128.59.179.26 at 2023-12-17 01:49:36 +0000
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 8.2ms | ActiveRecord: 0.0ms)
