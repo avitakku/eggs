@@ -1,0 +1,31 @@
+<!-- app/views/sessions/new.html.erb -->
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger">
+    <h4>Error(s) in the form. Please correct them.</h4>
+
+    <ul>
+      <li><%= flash[:alert] %></li>
+    </ul>
+  </div>
+<% end %>
+
+<h2>Log in</h2>
+
+<%= form_for :session, url: user_session_path do |f| %>
+  <div class="field">
+    <%= f.label :email_or_username, 'Email/Username' %> *<br />
+    <%= f.text_field :email_or_username, required: true %>
+  </div>
+  <br>
+
+  <div class="field">
+    <%= f.label :password %> *<br />
+    <%= f.password_field :password, required: true %>
+  </div>
+  <br>
+
+  <div class="actions">
+    <%= f.submit 'Log In', class: 'btn btn-primary' %>
+    
+  </div>
+<% end %>

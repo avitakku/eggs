@@ -5,10 +5,10 @@ Feature: Adding and deleting new friends
   I want to be able to find users and be able to add them as new connections
 
   Background: 
-  
-  Given I am on the Eggs home page
-
-  Scenario: Check current friends
+  Given I am on the login page
+  And I fill in value for "Email/Username" with "ar4179"
+  And I fill in value for "Password" with "defaultPassword"
+  And I click the "Log In" button
 
   Scenario: Add and Delete new friend
     Then the following items should exist:
@@ -28,7 +28,7 @@ Feature: Adding and deleting new friends
     | Name          | Contact Info         |
     | Aditi Mutagi  | agm2208@columbia.edu |
     | Avantika Garg | ag4049@columbia.edu  |
-    | Joshua Mei	  | jzm2103@columbia.edu |
+    | Joshua Mei	| jzm2103@columbia.edu |
     | Aryan Ray     | ar4179@columbia.edu  |
 
     Then I click on my friend "Joshua Mei"
