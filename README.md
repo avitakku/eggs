@@ -21,8 +21,8 @@ Aryan Ray - ar4179 <br>
        bundle exec rake db:drop db:create db:migrate db:seed
        rake db:migrate RAILS_ENV=test
        rake db:seed RAILS_ENV=test
-       run rake cucumber
-       run rake spec
+       rake cucumber
+       rake spec
 
 ## To Test Add Friends
    You can use the following friend keys to test the "Add Friends" feature for our seed users: 
