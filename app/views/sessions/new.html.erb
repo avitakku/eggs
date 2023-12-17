@@ -1,4 +1,14 @@
 <!-- app/views/sessions/new.html.erb -->
+<% if flash[:alert].present? %>
+  <div class="alert alert-danger">
+    <h4>Error(s) in the form. Please correct them.</h4>
+
+    <ul>
+      <li><%= flash[:alert] %></li>
+    </ul>
+  </div>
+<% end %>
+
 <h2>Log in</h2>
 
 <%= form_for :session, url: user_session_path do |f| %>

@@ -11,6 +11,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user_information.user_id
       redirect_to goods_services_path, notice: 'Registration successful!'
     else
+      flash.now[:alert] = 'Error(s) in the form. Please correct them.'
       render :new
     end
   end
