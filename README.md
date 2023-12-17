@@ -31,3 +31,11 @@ Aryan Ray - ar4179 <br>
        Avantika Garg - 67890 
        Aryan Ray - 94213 
        Joshua Mei - 15842 
+
+## To Test Different Users
+   You can use the following login credentials to test our different seed users (or add your own):
+
+      Aditi Mutagi - username: agm2208; password: defaultPassword
+      Avantika Garg - username: ag4049; password: defaultPassword
+      Aryan Ray - username: ar4179; password: defaultPassword
+      Joshua Mei - username: jzm2103; password: defaultPassword
