@@ -1,18 +1,20 @@
 <!-- app/views/sessions/new.html.erb -->
 <h2>Log in</h2>
 
-<%= form_for :session, url: session_path do |f| %>
+<%= form_for :session, url: user_session_path do |f| %>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
+    <%= f.label :email_or_username, 'Email/Username' %> *<br />
+    <%= f.text_field :email_or_username, required: true %>
   </div>
+  <br>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+    <%= f.label :password %> *<br />
+    <%= f.password_field :password, required: true %>
   </div>
+  <br>
 
   <div class="actions">
-    <%= link_to 'Log In', goods_services_path, class: 'btn btn-primary' %>
+    <%= f.submit 'Log In', class: 'btn btn-primary' %>
   </div>
 <% end %>
