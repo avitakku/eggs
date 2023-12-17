@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe UserInformation, type: :model do
   # Let's say you have the following setup:
-  let!(:person1) { UserInformation.create!(user_id: "1234", username: "person 1", name: "A", friends: []) }
-  let!(:person2) { UserInformation.create!(user_id: "2345", username: "person 2", name: "B", friends: ['1234']) }
-  let!(:person3) { UserInformation.create!(user_id: "3456", username: "person 3", name: "C", friends: ['1234', '2345']) }
+  let!(:person1) { UserInformation.create!(user_id: "1234", username: "person 1", name: "A", friends: [], password: "defaultPassword", password_confirmation: "defaultPassword") }
+  let!(:person2) { UserInformation.create!(user_id: "2345", username: "person 2", name: "B", friends: ['1234'], password: "defaultPassword", password_confirmation: "defaultPassword") }
+  let!(:person3) { UserInformation.create!(user_id: "3456", username: "person 3", name: "C", friends: ['1234', '2345'], password: "defaultPassword", password_confirmation: "defaultPassword") }
 
 
   describe '#validate_friends_array' do
