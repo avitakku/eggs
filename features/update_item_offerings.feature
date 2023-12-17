@@ -5,7 +5,10 @@ I want to be able to add new goods or services that show up on my profile
 
 Background:
     
-Given I am on the Eggs home page
+Given I am on the login page
+And I fill in value for "Email/Username" with "ar4179"
+And I fill in value for "Password" with "defaultPassword"
+And I click the "Log In" button
 When I click on the Edit Profile link
 Then the following items should exist:
 | name          | category |

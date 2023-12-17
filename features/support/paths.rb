@@ -13,6 +13,10 @@ module NavigationHelpers
   def path_to(page_name)
     case page_name
 
+    when /^the blank page/ then ''
+
+    when /^the login page/ then '/login'
+
     when /^the (Eggs )?home\s?page$/ then '/goods_services'
 
     # Add more mappings here.

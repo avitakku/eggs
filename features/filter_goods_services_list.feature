@@ -12,8 +12,12 @@ Feature: display list of goods and services
   | Tutoring      | Service  |
   | Textbooks     | Good     |
   | Laptop Repair | Service  |
+  
+  Given I am on the login page
+  And I fill in value for "Email/Username" with "ar4179"
+  And I fill in value for "Password" with "defaultPassword"
+  And I click the "Log In" button
 
-  Given I am on the Eggs home page
 
   Scenario: filter items by category
     Given I check the following categories: Good

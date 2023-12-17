@@ -187,6 +187,10 @@ When(/^I press the "Edit" link$/) do
   click_link("Edit")
 end
 
+When(/^I press the "Login" link$/) do 
+  click_link("Login")
+end
+
 When("I click the {string} link") do |string|
   click_link(string)
 end
