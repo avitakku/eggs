@@ -25,6 +25,7 @@ Eggs::Application.routes.draw do
   post 'sign_up', to: 'users#create', as: :user_registration
   post 'login', to: 'sessions#create', as: :user_session
 
+  delete '/logout', to: 'sessions#destroy', as: 'logout'
 
   root to: 'application#index'
 end
