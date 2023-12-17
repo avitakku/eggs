@@ -1,5 +1,4 @@
 class ProfileController < ApplicationController
-
     before_action :set_logged_in_user
   
     def index
@@ -30,61 +29,17 @@ class ProfileController < ApplicationController
     end
   
     def create
-        keys = params[:profile]
-        friend_id = keys[:friend_key]
-
-        target_id = params[:user_id]
-
-        users = UserInformation.where(user_id: @@logged_in_user)
-        user = nil
-        users.each do |x|
-            user = x
-        end
-
-        friends = user.friends
-        
-        if (friends.include? friend_id) or (friend_id.eql?(@@logged_in_user))
-            flash[:notice] = "You are already friends with this user!"
-            redirect_to controller: :profile, action: :index
-
-        elsif (not(target_id == friend_id))
-            flash[:notice] = "Incorrect Friend Key!"
-            redirect_to controller: :profile, action: :index
-
-        else
-            # add friend to logged in user's friend list
-            friends.push(friend_id)
-            user.update(friends: friends)
-
-            users = UserInformation.where(user_id: friend_id)
-            user2 = nil
-            users.each do |x|
-                user2 = x
-            end
-            
-            # add logged in user to friend's friend list
-            user2_friends = user2.friends
-            user2_friends.push(@@logged_in_user)
-            user2.update(friends: user2_friends)
-
-            redirect_to controller: :profile, action: :index
-
-        end
-    
-    end
-
-    def destroy
-        id = params[:id]
-
-        # remove friend from logged in user's friend list
-        users = UserInformation.where(user_id: @@logged_in_user)
-        user = nil
-        users.each do |x|
-            user = x
-        end
-        
-        friends = user.friends
-        friends.delete(id)
+      keys = params[:profile]
+      friend_id = keys[:friend_key]
+      
+      user = UserInformation.find_by(user_id: @logged_in_user)
+  
+      friends = user.friends
+      
+      if (not(friends.include? friend_id)) and (not(friend_id.eql?(@logged_in_user)))
+  
+        # add friend to logged in user's friend list
+        friends.push(friend_id)
         user.update(friends: friends)
   
         user2 = UserInformation.find_by(user_id: friend_id)

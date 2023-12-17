@@ -6,10 +6,11 @@ RSpec.describe GoodsServicesController, type: :controller do
       GoodsAndService.delete_all
     end
   
-    let!(:person1) { UserInformation.create!(user_id: "1234", username: "person 1", name: "A", friends: [], password: "defaultPassword", password_confirmation: "defaultPassword") }
-    let!(:person2) { UserInformation.create!(user_id: "2345", username: "person 2", name: "B", friends: ['1234'], password: "defaultPassword", password_confirmation: "defaultPassword") }
-    let!(:person3) { UserInformation.create!(user_id: "3456", username: "person 3", name: "C", friends: ['2345'], password: "defaultPassword", password_confirmation: "defaultPassword") }
-  
+    let!(:person1) { UserInformation.create!(user_id: "1234", username: "person 1", name: "A", contact_information: "test@columbia.edu", friends: [], password: "defaultPassword", password_confirmation: "defaultPassword") }
+    let!(:person2) { UserInformation.create!(user_id: "2345", username: "person 2", name: "B", contact_information: "test2@columbia.edu", friends: ['1234'], password: "defaultPassword", password_confirmation: "defaultPassword") }
+    let!(:person3) { UserInformation.create!(user_id: "3456", username: "person 3", name: "C", contact_information: "test3@columbia.edu", friends: ['1234', '2345'], password: "defaultPassword", password_confirmation: "defaultPassword") }
+
+
     let!(:item1)   { GoodsAndService.create!(user_id: "1234", name: "item1", category: 0, description: "A")}
     let!(:item2)   { GoodsAndService.create!(user_id: "1234", name: "item2", category: 1, description: "B")} 
     
