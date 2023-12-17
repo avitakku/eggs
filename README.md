@@ -18,11 +18,13 @@ Aryan Ray - ar4179 <br>
 ### 2. Running on Heroku:
    https://i-love-eggs-d229c21e8c11.herokuapp.com/goods_services
 ### 3. Running Cucumber + RSpec Tests:
+   Run the following commands:
+
        bundle exec rake db:drop db:create db:migrate db:seed
        rake db:migrate RAILS_ENV=test
        rake db:seed RAILS_ENV=test
-       run rake cucumber
-       run rake spec
+       rake cucumber
+       rake spec
 
 ## To Test Add Friends
    You can use the following friend keys to test the "Add Friends" feature for our seed users: 
