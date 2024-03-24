@@ -15,9 +15,8 @@ Aryan Ray - ar4179 <br>
       bundle install
    Start the rails server: rails server -b 0.0.0.0 <br>
    Click Box URL <br>
-### 2. Running on Heroku:
-   https://i-love-eggs-d229c21e8c11.herokuapp.com/goods_services
-### 3. Running Cucumber + RSpec Tests:
+
+### 2. Running Cucumber + RSpec Tests:
    Run the following commands:
 
        bundle exec rake db:drop db:create db:migrate db:seed
