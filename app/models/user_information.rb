@@ -1,6 +1,7 @@
 # app/models/user_information.rb
 class UserInformation < ActiveRecord::Base
-  
+    serialize :friends, Array
+    
     has_secure_password
   
     validate :validate_friends_array
